@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>软件工坊</title>
+<meta name="description" content="从 Windows 工具到 Android 应用，都是自己日常在用、顺手做出来给别人也用的东西。免费的可以直接下载，上架的请到应用市场安装。">
+<meta property="og:title" content="软件工坊">
+<meta property="og:description" content="我做的一些小软件，都在这里">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">工</span>
+      <span>软件工坊</span>
+    </a>
+    <nav class="header-nav">
+      
+      <button class="icon-btn" id="theme-toggle" aria-label="切换主题"></button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="hero">
+      <span class="hero-eyebrow"><span class="dot"></span>持续更新中</span>
+      <h1>我做的一些小软件，都在这里</h1>
+      <p>从 Windows 工具到 Android 应用，都是自己日常在用、顺手做出来给别人也用的东西。免费的可以直接下载，上架的请到应用市场安装。</p>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">4</div>
+          <div class="stat-label">个软件</div>
+        </div>
+        <div>
+          <div class="stat-num">4</div>
+          <div class="stat-label">个平台</div>
+        </div>
+        <div>
+          <div class="stat-num">0</div>
+          <div class="stat-label">广告与追踪</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="toolbar">
+      <div class="chips"><button class="chip" data-platform="all" aria-pressed="true">全部</button><button class="chip" data-platform="Android" aria-pressed="false">Android</button><button class="chip" data-platform="Web" aria-pressed="false">Web</button><button class="chip" data-platform="Windows" aria-pressed="false">Windows</button><button class="chip" data-platform="visionOS" aria-pressed="false">visionOS</button></div>
+      <div class="search">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="搜索软件…" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="grid" id="grid">
+      <a class="card" href="apps/duskflow/index.html" data-platforms="Android" data-text="Duskflow 本地音乐播放器，把专辑封面摆成一面可以转动的墙 Android"><span class="sample-badge">示例</span><div class="card-top"><div class="app-icon ph">D</div><div><h3>Duskflow</h3><p class="tagline">本地音乐播放器，把专辑封面摆成一面可以转动的墙</p></div></div><div class="card-bottom"><span class="pill accent">已发布</span><span class="pill">Android</span><span class="pill">v1.2.0</span><span class="card-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="card" href="apps/skytela/index.html" data-platforms="visionOS" data-text="SkytelaPlayer visionOS 上的空间视频播放器 visionOS"><span class="sample-badge">示例</span><div class="card-top"><div class="app-icon ph">S</div><div><h3>SkytelaPlayer</h3><p class="tagline">visionOS 上的空间视频播放器</p></div></div><div class="card-bottom"><span class="pill accent">已发布</span><span class="pill">visionOS</span><span class="pill">v1.7.1</span><span class="card-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="card" href="apps/wtl-schedule/index.html" data-platforms="Windows,Web" data-text="项目排程工作台 单文件甘特图工具，拷到哪台电脑都能直接用 Windows Web"><span class="sample-badge">示例</span><div class="card-top"><div class="app-icon ph">项</div><div><h3>项目排程工作台</h3><p class="tagline">单文件甘特图工具，拷到哪台电脑都能直接用</p></div></div><div class="card-bottom"><span class="pill warn">测试版</span><span class="pill">Windows</span><span class="pill">Web</span><span class="pill">v0.9.4</span><span class="card-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="card" href="apps/quote-tool/index.html" data-platforms="Windows" data-text="报价单自动生成 填几个参数，直接出一份能发客户的报价单 Windows"><span class="sample-badge">示例</span><div class="card-top"><div class="app-icon ph">报</div><div><h3>报价单自动生成</h3><p class="tagline">填几个参数，直接出一份能发客户的报价单</p></div></div><div class="card-bottom"><span class="pill">即将上线</span><span class="pill">Windows</span><span class="card-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+      <div class="empty" id="empty" style="display:none">没有找到匹配的软件</div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 软件工坊 · 本站所有软件均为个人作品</span>
+    <div class="footer-links"></div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

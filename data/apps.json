@@ -1,0 +1,122 @@
+{
+  "site": {
+    "name": "软件工坊",
+    "brandLetter": "工",
+    "tagline": "我做的一些小软件，都在这里",
+    "intro": "从 Windows 工具到 Android 应用，都是自己日常在用、顺手做出来给别人也用的东西。免费的可以直接下载，上架的请到应用市场安装。",
+    "author": "",
+    "email": "",
+    "github": "",
+    "copyright": "本站所有软件均为个人作品"
+  },
+  "apps": [
+    {
+      "slug": "duskflow",
+      "name": "Duskflow",
+      "tagline": "本地音乐播放器，把专辑封面摆成一面可以转动的墙",
+      "platforms": ["Android"],
+      "status": "released",
+      "version": "1.2.0",
+      "updated": "2026-11-01",
+      "size": "24 MB",
+      "icon": "",
+      "screenshots": [],
+      "sample": true,
+      "description": "这段文字是占位示例，换成你自己的介绍就行。建议写清楚：这个软件解决什么问题、适合谁用、有什么不一样的地方。三五句话足够，不用写成说明书。",
+      "features": [
+        "3D 专辑封面墙，可以整屏浏览",
+        "分屏歌词，横屏观看",
+        "完全本地播放，不联网、不收集数据"
+      ],
+      "download": {
+        "type": "store",
+        "note": "在应用市场安装，更新由市场自动推送。",
+        "stores": [
+          { "name": "Google Play", "url": "https://play.google.com/store/apps" },
+          { "name": "酷安", "url": "https://www.coolapk.com/" }
+        ]
+      },
+      "changelog": [
+        { "version": "1.2.0", "date": "2026-11-01", "notes": ["新增分屏歌词", "修复大图集滚动卡顿"] },
+        { "version": "1.0.0", "date": "2026-09-12", "notes": ["首个公开版本"] }
+      ]
+    },
+    {
+      "slug": "skytela",
+      "name": "SkytelaPlayer",
+      "tagline": "visionOS 上的空间视频播放器",
+      "platforms": ["visionOS"],
+      "status": "released",
+      "version": "1.7.1",
+      "updated": "2026-10-20",
+      "size": "38 MB",
+      "icon": "",
+      "screenshots": [],
+      "sample": true,
+      "description": "占位示例文案。这里可以写软件的核心玩法、支持哪些格式、对设备有什么要求。",
+      "features": [
+        "支持常见视频格式直接播放",
+        "空间化播放窗口，可自由摆放",
+        "支持外挂字幕"
+      ],
+      "download": {
+        "type": "github",
+        "note": "从 GitHub Releases 下载，永久免费。",
+        "url": "https://github.com/"
+      },
+      "changelog": [
+        { "version": "1.7.1", "date": "2026-10-20", "notes": ["修复部分文件无法识别音轨"] }
+      ]
+    },
+    {
+      "slug": "wtl-schedule",
+      "name": "项目排程工作台",
+      "tagline": "单文件甘特图工具，拷到哪台电脑都能直接用",
+      "platforms": ["Windows", "Web"],
+      "status": "beta",
+      "version": "0.9.4",
+      "updated": "2026-11-10",
+      "size": "1.2 MB",
+      "icon": "",
+      "screenshots": [],
+      "sample": true,
+      "description": "占位示例文案。这个软件是自己工作里天天用的工具，可以写写它最初是为什么做的。",
+      "features": [
+        "单 HTML 文件，双击即用，不装任何东西",
+        "任务之间的前后依赖连线一目了然",
+        "深色 / 浅色双主题，28 色自定义色板"
+      ],
+      "download": {
+        "type": "github",
+        "note": "从 GitHub Releases 下载压缩包，解压双击即用。",
+        "url": "https://github.com/"
+      },
+      "changelog": [
+        { "version": "0.9.4", "date": "2026-11-10", "notes": ["依赖连线改为连接日期格边界", "打印时自动隐藏连线"] }
+      ]
+    },
+    {
+      "slug": "quote-tool",
+      "name": "报价单自动生成",
+      "tagline": "填几个参数，直接出一份能发客户的报价单",
+      "platforms": ["Windows"],
+      "status": "coming",
+      "version": "",
+      "updated": "",
+      "size": "",
+      "icon": "",
+      "screenshots": [],
+      "sample": true,
+      "description": "占位示例文案。还没做完的软件也可以先放上来，让人知道你在做什么。",
+      "features": [
+        "按机型参数自动计算配置清单",
+        "一键导出 PDF 报价单"
+      ],
+      "download": {
+        "type": "none",
+        "note": "还在做，暂时没有对外发布。做好了会放在这里。"
+      },
+      "changelog": []
+    }
+  ]
+}

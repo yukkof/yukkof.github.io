@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{SITE_NAME}}</title>
+<meta name="description" content="{{INTRO}}">
+<meta property="og:title" content="{{SITE_NAME}}">
+<meta property="og:description" content="{{TAGLINE}}">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="{{ASSETS}}assets/site.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="{{ASSETS}}index.html">
+      <span class="brand-mark">{{BRAND_LETTER}}</span>
+      <span>{{SITE_NAME}}</span>
+    </a>
+    <nav class="header-nav">
+      {{NAV_LINKS}}
+      <button class="icon-btn" id="theme-toggle" aria-label="切换主题"></button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="hero">
+      <span class="hero-eyebrow"><span class="dot"></span>持续更新中</span>
+      <h1>{{TAGLINE}}</h1>
+      <p>{{INTRO}}</p>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">{{APP_COUNT}}</div>
+          <div class="stat-label">个软件</div>
+        </div>
+        <div>
+          <div class="stat-num">{{PLATFORM_COUNT}}</div>
+          <div class="stat-label">个平台</div>
+        </div>
+        <div>
+          <div class="stat-num">0</div>
+          <div class="stat-label">广告与追踪</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="toolbar">
+      <div class="chips">{{CHIPS}}</div>
+      <div class="search">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="搜索软件…" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="grid" id="grid">
+      {{CARDS}}
+      <div class="empty" id="empty" style="display:none">没有找到匹配的软件</div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© {{YEAR}} {{SITE_NAME}} · {{COPYRIGHT}}</span>
+    <div class="footer-links">{{FOOTER_LINKS}}</div>
+  </div>
+</footer>
+
+<script src="{{ASSETS}}assets/site.js"></script>
+</body>
+</html>

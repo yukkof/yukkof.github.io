@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{NAME}} · {{SITE_NAME}}</title>
+<meta name="description" content="{{APP_TAGLINE}}">
+<meta property="og:title" content="{{NAME}}">
+<meta property="og:description" content="{{APP_TAGLINE}}">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="{{ASSETS}}assets/site.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="{{ASSETS}}index.html">
+      <span class="brand-mark">{{BRAND_LETTER}}</span>
+      <span>{{SITE_NAME}}</span>
+    </a>
+    <nav class="header-nav">
+      <a href="{{ASSETS}}index.html" class="keep">全部软件</a>
+      {{NAV_LINKS}}
+      <button class="icon-btn" id="theme-toggle" aria-label="切换主题"></button>
+    </nav>
+  </div>
+</header>
+
+<main class="detail">
+  <div class="wrap">
+    <a class="back-link" href="{{ASSETS}}index.html">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      返回全部软件
+    </a>
+
+    <div class="detail-head">
+      {{ICON}}
+      <div>
+        <h1>{{NAME}}</h1>
+        <p class="tagline">{{APP_TAGLINE}}</p>
+        <div class="meta-row">{{PILLS}}</div>
+      </div>
+    </div>
+
+    <div class="detail-body">
+      <div class="detail-main">
+        {{SHOTS}}
+        <section class="prose">
+          <h2 class="sec">介绍</h2>
+          <p>{{DESCRIPTION}}</p>
+        </section>
+        {{FEATURES}}
+        {{CHANGELOG}}
+      </div>
+
+      <aside class="side">
+        {{DL}}
+        <div class="dl-box">
+          <h3>软件信息</h3>
+          {{SPEC}}
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© {{YEAR}} {{SITE_NAME}} · {{COPYRIGHT}}</span>
+    <div class="footer-links">{{FOOTER_LINKS}}</div>
+  </div>
+</footer>
+
+<script src="{{ASSETS}}assets/site.js"></script>
+</body>
+</html>
