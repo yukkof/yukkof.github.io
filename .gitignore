@@ -1,5 +1,6 @@
 _*.py
 _*.png
+*.bak
 __pycache__/
 *.pyc
 .DS_Store

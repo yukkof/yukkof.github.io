@@ -1,76 +1,80 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SkytelaPlayer · 软件工坊</title>
+<title>SkytelaPlayer — 黄彧的杂物间</title>
 <meta name="description" content="visionOS 上的空间视频播放器">
-<meta property="og:title" content="SkytelaPlayer">
-<meta property="og:description" content="visionOS 上的空间视频播放器">
+<meta name="theme-color" content="#08090a">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://yukkof.github.io/assets/og.png">
+<meta property="og:title" content="SkytelaPlayer — 黄彧的杂物间">
+<meta property="og:description" content="visionOS 上的空间视频播放器">
+<meta property="og:image" content="../../assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../../assets/site.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="wrap">
+<div class="nav-shell">
+  <nav class="nav">
     <a class="brand" href="../../index.html">
-      <span class="brand-mark">工</span>
-      <span>软件工坊</span>
+      <span class="mark">彧</span><span data-zh="黄彧的杂物间" data-en="Huang Yu's Workshop">黄彧的杂物间</span>
     </a>
-    <nav class="header-nav">
-      <a href="../../index.html" class="keep">全部软件</a>
-      
-      <button class="icon-btn" id="theme-toggle" aria-label="切换主题"></button>
-    </nav>
-  </div>
-</header>
+    <div class="nav-links"><a href="https://github.com/yukkof" target="_blank" rel="noopener">GitHub</a></div>
+    <span class="nav-spacer"></span>
+    <div class="lang-switch" id="lang-switch">
+      <button type="button" data-lang="zh" aria-pressed="true">中</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="切换主题"></button>
+  </nav>
+</div>
 
-<main class="detail">
-  <div class="wrap">
-    <a class="back-link" href="../../index.html">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
-      返回全部软件
-    </a>
+<main class="wrap detail">
 
-    <div class="detail-head">
-      <div class="app-icon ph">S</div>
-      <div>
-        <h1>SkytelaPlayer</h1>
-        <p class="tagline">visionOS 上的空间视频播放器</p>
-        <div class="meta-row"><span class="pill accent">已发布</span><span class="pill">visionOS</span><span class="pill">v1.7.1</span></div>
-      </div>
+  <a class="back" href="../../index.html">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+    <span data-i18n="back">全部软件</span>
+  </a>
+
+  <header class="detail-head">
+    <div class="app-icon ph" style="background:linear-gradient(155deg,#ff7ea8,#c4356b)">S</div>
+    <div class="detail-title">
+      <h1 data-zh="SkytelaPlayer" data-en="SkytelaPlayer">SkytelaPlayer</h1>
+      <p class="detail-tagline" data-zh="visionOS 上的空间视频播放器" data-en="A spatial video player for visionOS">visionOS 上的空间视频播放器</p>
+      <div class="pills"><span class="pill accent" data-zh="已发布" data-en="Released">已发布</span><span class="pill">visionOS</span><span class="pill">v1.7.1</span></div>
+    </div>
+  </header>
+
+  <div class="detail-body">
+    <div class="main-col">
+      <section>
+        <h2 class="sec" data-i18n="about">介绍</h2>
+        <p class="prose" data-zh="占位示例文案。这里可以写软件的核心玩法、支持哪些格式、对设备有什么要求。" data-en="Placeholder copy. Describe the core idea, which formats are supported, and what devices it runs on.">占位示例文案。这里可以写软件的核心玩法、支持哪些格式、对设备有什么要求。</p>
+      </section>
+      <section><h2 class="sec" data-i18n="features">功能</h2><ul class="feature-list"><li data-zh="支持常见视频格式直接播放" data-en="Plays common video formats directly">支持常见视频格式直接播放</li><li data-zh="空间化播放窗口，可自由摆放" data-en="Spatial window you can place anywhere">空间化播放窗口，可自由摆放</li><li data-zh="支持外挂字幕" data-en="External subtitle support">支持外挂字幕</li></ul></section>
+      <section><h2 class="sec" data-i18n="shots">截图</h2><div class="shots"><div class="shot-ph" data-zh="截图待补" data-en="Screenshots coming">截图待补</div></div></section>
+      <section><h2 class="sec" data-i18n="logs">更新记录</h2><div class="log"><div class="log-item"><div class="log-head"><span class="log-ver">v1.7.1</span><span class="log-date">2026-10-20</span></div><ul><li>修复部分文件无法识别音轨</li></ul></div></div></section>
     </div>
 
-    <div class="detail-body">
-      <div class="detail-main">
-        <section><h2 class="sec">截图</h2><div class="shots"><div class="shot-ph">截图待补</div></div></section>
-        <section class="prose">
-          <h2 class="sec">介绍</h2>
-          <p>占位示例文案。这里可以写软件的核心玩法、支持哪些格式、对设备有什么要求。</p>
-        </section>
-        <section><h2 class="sec">功能</h2><ul class="feature-list"><li>支持常见视频格式直接播放</li><li>空间化播放窗口，可自由摆放</li><li>支持外挂字幕</li></ul></section>
-        <section><h2 class="sec">更新记录</h2><div class="log"><div class="log-item"><div class="log-head"><span class="log-ver">v1.7.1</span><span class="log-date">2026-10-20</span></div><ul><li>修复部分文件无法识别音轨</li></ul></div></div></section>
-      </div>
-
-      <aside class="side">
-        <div class="dl-box"><h3>获取这个软件</h3><p class="dl-note">从 GitHub Releases 下载，永久免费。</p><a class="btn btn-primary" href="https://github.com/" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg>下载</a></div>
-        <div class="dl-box">
-          <h3>软件信息</h3>
-          <div class="spec"><dt>平台</dt><dd>visionOS</dd></div><div class="spec"><dt>版本</dt><dd>v1.7.1</dd></div><div class="spec"><dt>体积</dt><dd>38 MB</dd></div><div class="spec"><dt>更新</dt><dd>2026-10-20</dd></div>
-        </div>
-      </aside>
-    </div>
+    <aside class="side">
+      <div class="dl-box"><h3 data-i18n="getApp">获取这个软件</h3><p class="dl-note" data-zh="从 GitHub Releases 下载，永久免费。" data-en="Download from GitHub Releases. Free forever.">从 GitHub Releases 下载，永久免费。</p><a class="btn btn-primary" href="https://github.com/" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg><span data-i18n="download">下载</span></a></div>
+      <div class="spec-card"><div class="spec"><dt data-zh="平台" data-en="Platform">平台</dt><dd>visionOS</dd></div><div class="spec"><dt data-zh="版本" data-en="Version">版本</dt><dd>v1.7.1</dd></div><div class="spec"><dt data-zh="体积" data-en="Size">体积</dt><dd>38 MB</dd></div><div class="spec"><dt data-zh="更新" data-en="Updated">更新</dt><dd>2026-10-20</dd></div></div>
+    </aside>
   </div>
+
 </main>
 
-<footer class="site-footer">
+<footer class="footer">
   <div class="wrap">
-    <span>© 2026 软件工坊 · 本站所有软件均为个人作品</span>
-    <div class="footer-links"></div>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand" data-zh="黄彧的杂物间" data-en="Huang Yu's Workshop">黄彧的杂物间</div>
+        <div class="footer-note">本站所有软件均为个人作品</div>
+      </div>
+      <div class="footer-links"><a href="https://github.com/yukkof" target="_blank" rel="noopener">GitHub</a></div>
+    </div>
   </div>
 </footer>
 

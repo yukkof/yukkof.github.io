@@ -1,20 +1,28 @@
 {
   "site": {
-    "name": "软件工坊",
-    "brandLetter": "工",
+    "name": "黄彧的杂物间",
+    "brandLetter": "彧",
     "tagline": "我做的一些小软件，都在这里",
+    "taglineEn": "Small apps I build — all in one place.",
     "intro": "从 Windows 工具到 Android 应用，都是自己日常在用、顺手做出来给别人也用的东西。免费的可以直接下载，上架的请到应用市场安装。",
-    "author": "",
+    "introEn": "From Windows utilities to Android apps — tools I use every day, built for others too. Free ones download straight from here; published ones install from the App Store or Google Play.",
+    "author": "黄彧",
     "email": "",
-    "github": "",
-    "copyright": "本站所有软件均为个人作品"
+    "github": "https://github.com/yukkof",
+    "copyright": "本站所有软件均为个人作品",
+    "nameEn": "Huang Yu's Workshop"
   },
   "apps": [
     {
       "slug": "duskflow",
       "name": "Duskflow",
+      "nameEn": "Duskflow",
       "tagline": "本地音乐播放器，把专辑封面摆成一面可以转动的墙",
-      "platforms": ["Android", "iOS"],
+      "taglineEn": "A local music player that turns album art into a wall you can spin",
+      "platforms": [
+        "Android",
+        "iOS"
+      ],
       "status": "released",
       "version": "1.2.0",
       "updated": "2026-11-01",
@@ -23,29 +31,59 @@
       "screenshots": [],
       "sample": true,
       "description": "这段文字是占位示例，换成你自己的介绍就行。建议写清楚：这个软件解决什么问题、适合谁用、有什么不一样的地方。三五句话足够，不用写成说明书。",
+      "descriptionEn": "Placeholder copy — replace it with your own. Explain what problem the app solves, who it is for, and what makes it different. Three to five sentences is plenty.",
       "features": [
         "3D 专辑封面墙，可以整屏浏览",
         "分屏歌词，横屏观看",
         "完全本地播放，不联网、不收集数据"
       ],
+      "featuresEn": [
+        "3D album-art wall you can browse full screen",
+        "Split-screen lyrics in landscape",
+        "Fully offline playback — no network, no tracking"
+      ],
       "download": {
         "type": "store",
         "note": "在应用市场安装，更新由市场自动推送。",
+        "noteEn": "Install from the store — updates are pushed automatically.",
         "stores": [
-          { "name": "App Store", "url": "https://apps.apple.com/" },
-          { "name": "Google Play", "url": "https://play.google.com/store/apps" }
+          {
+            "name": "App Store",
+            "url": "https://apps.apple.com/"
+          },
+          {
+            "name": "Google Play",
+            "url": "https://play.google.com/store/apps"
+          }
         ]
       },
       "changelog": [
-        { "version": "1.2.0", "date": "2026-11-01", "notes": ["新增分屏歌词", "修复大图集滚动卡顿"] },
-        { "version": "1.0.0", "date": "2026-09-12", "notes": ["首个公开版本"] }
+        {
+          "version": "1.2.0",
+          "date": "2026-11-01",
+          "notes": [
+            "新增分屏歌词",
+            "修复大图集滚动卡顿"
+          ]
+        },
+        {
+          "version": "1.0.0",
+          "date": "2026-09-12",
+          "notes": [
+            "首个公开版本"
+          ]
+        }
       ]
     },
     {
       "slug": "skytela",
       "name": "SkytelaPlayer",
+      "nameEn": "SkytelaPlayer",
       "tagline": "visionOS 上的空间视频播放器",
-      "platforms": ["visionOS"],
+      "taglineEn": "A spatial video player for visionOS",
+      "platforms": [
+        "visionOS"
+      ],
       "status": "released",
       "version": "1.7.1",
       "updated": "2026-10-20",
@@ -54,25 +92,43 @@
       "screenshots": [],
       "sample": true,
       "description": "占位示例文案。这里可以写软件的核心玩法、支持哪些格式、对设备有什么要求。",
+      "descriptionEn": "Placeholder copy. Describe the core idea, which formats are supported, and what devices it runs on.",
       "features": [
         "支持常见视频格式直接播放",
         "空间化播放窗口，可自由摆放",
         "支持外挂字幕"
       ],
+      "featuresEn": [
+        "Plays common video formats directly",
+        "Spatial window you can place anywhere",
+        "External subtitle support"
+      ],
       "download": {
         "type": "github",
         "note": "从 GitHub Releases 下载，永久免费。",
+        "noteEn": "Download from GitHub Releases. Free forever.",
         "url": "https://github.com/"
       },
       "changelog": [
-        { "version": "1.7.1", "date": "2026-10-20", "notes": ["修复部分文件无法识别音轨"] }
+        {
+          "version": "1.7.1",
+          "date": "2026-10-20",
+          "notes": [
+            "修复部分文件无法识别音轨"
+          ]
+        }
       ]
     },
     {
       "slug": "wtl-schedule",
       "name": "项目排程工作台",
+      "nameEn": "Schedule Studio",
       "tagline": "单文件甘特图工具，拷到哪台电脑都能直接用",
-      "platforms": ["Windows", "Web"],
+      "taglineEn": "A single-file Gantt tool you can carry on a USB stick",
+      "platforms": [
+        "Windows",
+        "Web"
+      ],
       "status": "beta",
       "version": "0.9.4",
       "updated": "2026-11-10",
@@ -81,25 +137,43 @@
       "screenshots": [],
       "sample": true,
       "description": "占位示例文案。这个软件是自己工作里天天用的工具，可以写写它最初是为什么做的。",
+      "descriptionEn": "Placeholder copy. This one comes from my own daily work — worth saying why it was built in the first place.",
       "features": [
         "单 HTML 文件，双击即用，不装任何东西",
         "任务之间的前后依赖连线一目了然",
         "深色 / 浅色双主题，28 色自定义色板"
       ],
+      "featuresEn": [
+        "One HTML file — double-click and go, nothing to install",
+        "Dependency links between tasks at a glance",
+        "Dark and light themes with a 28-colour custom palette"
+      ],
       "download": {
         "type": "github",
         "note": "从 GitHub Releases 下载压缩包，解压双击即用。",
+        "noteEn": "Download the archive from GitHub Releases, unzip, double-click.",
         "url": "https://github.com/"
       },
       "changelog": [
-        { "version": "0.9.4", "date": "2026-11-10", "notes": ["依赖连线改为连接日期格边界", "打印时自动隐藏连线"] }
+        {
+          "version": "0.9.4",
+          "date": "2026-11-10",
+          "notes": [
+            "依赖连线改为连接日期格边界",
+            "打印时自动隐藏连线"
+          ]
+        }
       ]
     },
     {
       "slug": "quote-tool",
       "name": "报价单自动生成",
+      "nameEn": "Quote Builder",
       "tagline": "填几个参数，直接出一份能发客户的报价单",
-      "platforms": ["Windows"],
+      "taglineEn": "Fill in a few specs, get a client-ready quote",
+      "platforms": [
+        "Windows"
+      ],
       "status": "coming",
       "version": "",
       "updated": "",
@@ -108,13 +182,19 @@
       "screenshots": [],
       "sample": true,
       "description": "占位示例文案。还没做完的软件也可以先放上来，让人知道你在做什么。",
+      "descriptionEn": "Placeholder copy. Unfinished apps can live here too — it shows what you are working on.",
       "features": [
         "按机型参数自动计算配置清单",
         "一键导出 PDF 报价单"
       ],
+      "featuresEn": [
+        "Builds the configuration list from machine specs",
+        "Exports a PDF quote in one click"
+      ],
       "download": {
         "type": "none",
-        "note": "还在做，暂时没有对外发布。做好了会放在这里。"
+        "note": "还在做，暂时没有对外发布。做好了会放在这里。",
+        "noteEn": "Still in the works — it will show up here when it's ready."
       },
       "changelog": []
     }

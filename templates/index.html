@@ -1,74 +1,81 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{SITE_NAME}}</title>
+<title>{{SITE_NAME}} — {{TAGLINE}}</title>
 <meta name="description" content="{{INTRO}}">
-<meta property="og:title" content="{{SITE_NAME}}">
-<meta property="og:description" content="{{TAGLINE}}">
+<meta name="theme-color" content="#08090a">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://yukkof.github.io/assets/og.png">
+<meta property="og:title" content="{{SITE_NAME}} — {{TAGLINE}}">
+<meta property="og:description" content="{{INTRO}}">
+<meta property="og:image" content="{{ASSETS}}assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{{ASSETS}}assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="{{ASSETS}}assets/site.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="wrap">
+<div class="nav-shell">
+  <nav class="nav">
     <a class="brand" href="{{ASSETS}}index.html">
-      <span class="brand-mark">{{BRAND_LETTER}}</span>
-      <span>{{SITE_NAME}}</span>
+      <span class="mark">{{BRAND_LETTER}}</span><span data-zh="{{SITE_NAME}}" data-en="{{SITE_NAME_EN}}">{{SITE_NAME}}</span>
     </a>
-    <nav class="header-nav">
-      {{NAV_LINKS}}
-      <button class="icon-btn" id="theme-toggle" aria-label="切换主题"></button>
-    </nav>
-  </div>
-</header>
+    <div class="nav-links">{{NAV_LINKS}}</div>
+    <span class="nav-spacer"></span>
+    <div class="lang-switch" id="lang-switch">
+      <button type="button" data-lang="zh" aria-pressed="true">中</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="切换主题"></button>
+  </nav>
+</div>
 
-<main>
-  <div class="wrap">
-    <section class="hero">
-      <span class="hero-eyebrow"><span class="dot"></span>持续更新中</span>
-      <h1>{{TAGLINE}}</h1>
-      <p>{{INTRO}}</p>
-      <div class="hero-stats">
-        <div>
-          <div class="stat-num">{{APP_COUNT}}</div>
-          <div class="stat-label">个软件</div>
-        </div>
-        <div>
-          <div class="stat-num">{{PLATFORM_COUNT}}</div>
-          <div class="stat-label">个平台</div>
-        </div>
-        <div>
-          <div class="stat-num">0</div>
-          <div class="stat-label">广告与追踪</div>
-        </div>
-      </div>
-    </section>
+<main class="wrap">
 
+  <section class="hero">
+    <span class="hero-eyebrow">
+      <span class="dot"></span>
+      <span data-i18n="eyebrow" data-count="{{APP_COUNT}}">{{APP_COUNT}} 个作品 · 持续更新</span>
+    </span>
+    <h1 data-zh="{{TAGLINE}}" data-en="{{TAGLINE_EN}}">{{TAGLINE}}</h1>
+    <p class="hero-sub" data-zh="{{INTRO}}" data-en="{{INTRO_EN}}">{{INTRO}}</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#library" data-i18n="browse">浏览全部</a>
+      <a class="btn btn-ghost" href="{{GITHUB}}" target="_blank" rel="noopener" data-i18n="onGithub">在 GitHub 上看</a>
+    </div>
+    <div class="hero-stats">
+      <div><b>{{APP_COUNT}}</b><span data-i18n="statApps">个软件</span></div>
+      <div><b>{{PLATFORM_COUNT}}</b><span data-i18n="statPlatforms">个平台</span></div>
+      <div><b>0</b><span data-i18n="statAds">个广告</span></div>
+    </div>
+  </section>
+
+  <section class="library" id="library">
     <div class="toolbar">
+      <span class="toolbar-title" data-i18n="works">作品</span>
       <div class="chips">{{CHIPS}}</div>
-      <div class="search">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-        <input id="q" type="search" placeholder="搜索软件…" autocomplete="off">
-      </div>
+      <label class="search">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input id="q" type="search" autocomplete="off" placeholder="搜索软件" data-i18n-ph="searchPh">
+      </label>
     </div>
+    <div class="grid" id="grid">{{CARDS}}</div>
+    <div class="empty" id="empty" style="display:none" data-i18n="empty">没有匹配的软件</div>
+  </section>
 
-    <div class="grid" id="grid">
-      {{CARDS}}
-      <div class="empty" id="empty" style="display:none">没有找到匹配的软件</div>
-    </div>
-  </div>
 </main>
 
-<footer class="site-footer">
+<footer class="footer">
   <div class="wrap">
-    <span>© {{YEAR}} {{SITE_NAME}} · {{COPYRIGHT}}</span>
-    <div class="footer-links">{{FOOTER_LINKS}}</div>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand" data-zh="{{SITE_NAME}}" data-en="{{SITE_NAME_EN}}">{{SITE_NAME}}</div>
+        <div class="footer-note">{{COPYRIGHT}}</div>
+      </div>
+      <div class="footer-links">{{FOOTER_LINKS}}</div>
+    </div>
+    <div class="footer-wordmark">{{BRAND_LETTER}}</div>
   </div>
 </footer>
 

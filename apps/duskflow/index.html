@@ -1,76 +1,80 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Duskflow · 软件工坊</title>
+<title>Duskflow — 黄彧的杂物间</title>
 <meta name="description" content="本地音乐播放器，把专辑封面摆成一面可以转动的墙">
-<meta property="og:title" content="Duskflow">
-<meta property="og:description" content="本地音乐播放器，把专辑封面摆成一面可以转动的墙">
+<meta name="theme-color" content="#08090a">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://yukkof.github.io/assets/og.png">
+<meta property="og:title" content="Duskflow — 黄彧的杂物间">
+<meta property="og:description" content="本地音乐播放器，把专辑封面摆成一面可以转动的墙">
+<meta property="og:image" content="../../assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../../assets/site.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="wrap">
+<div class="nav-shell">
+  <nav class="nav">
     <a class="brand" href="../../index.html">
-      <span class="brand-mark">工</span>
-      <span>软件工坊</span>
+      <span class="mark">彧</span><span data-zh="黄彧的杂物间" data-en="Huang Yu's Workshop">黄彧的杂物间</span>
     </a>
-    <nav class="header-nav">
-      <a href="../../index.html" class="keep">全部软件</a>
-      
-      <button class="icon-btn" id="theme-toggle" aria-label="切换主题"></button>
-    </nav>
-  </div>
-</header>
+    <div class="nav-links"><a href="https://github.com/yukkof" target="_blank" rel="noopener">GitHub</a></div>
+    <span class="nav-spacer"></span>
+    <div class="lang-switch" id="lang-switch">
+      <button type="button" data-lang="zh" aria-pressed="true">中</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="切换主题"></button>
+  </nav>
+</div>
 
-<main class="detail">
-  <div class="wrap">
-    <a class="back-link" href="../../index.html">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
-      返回全部软件
-    </a>
+<main class="wrap detail">
 
-    <div class="detail-head">
-      <div class="app-icon ph">D</div>
-      <div>
-        <h1>Duskflow</h1>
-        <p class="tagline">本地音乐播放器，把专辑封面摆成一面可以转动的墙</p>
-        <div class="meta-row"><span class="pill accent">已发布</span><span class="pill">Android</span><span class="pill">iOS</span><span class="pill">v1.2.0</span></div>
-      </div>
+  <a class="back" href="../../index.html">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+    <span data-i18n="back">全部软件</span>
+  </a>
+
+  <header class="detail-head">
+    <div class="app-icon ph" style="background:linear-gradient(155deg,#7b8cff,#4451c9)">D</div>
+    <div class="detail-title">
+      <h1 data-zh="Duskflow" data-en="Duskflow">Duskflow</h1>
+      <p class="detail-tagline" data-zh="本地音乐播放器，把专辑封面摆成一面可以转动的墙" data-en="A local music player that turns album art into a wall you can spin">本地音乐播放器，把专辑封面摆成一面可以转动的墙</p>
+      <div class="pills"><span class="pill accent" data-zh="已发布" data-en="Released">已发布</span><span class="pill">Android</span><span class="pill">iOS</span><span class="pill">v1.2.0</span></div>
+    </div>
+  </header>
+
+  <div class="detail-body">
+    <div class="main-col">
+      <section>
+        <h2 class="sec" data-i18n="about">介绍</h2>
+        <p class="prose" data-zh="这段文字是占位示例，换成你自己的介绍就行。建议写清楚：这个软件解决什么问题、适合谁用、有什么不一样的地方。三五句话足够，不用写成说明书。" data-en="Placeholder copy — replace it with your own. Explain what problem the app solves, who it is for, and what makes it different. Three to five sentences is plenty.">这段文字是占位示例，换成你自己的介绍就行。建议写清楚：这个软件解决什么问题、适合谁用、有什么不一样的地方。三五句话足够，不用写成说明书。</p>
+      </section>
+      <section><h2 class="sec" data-i18n="features">功能</h2><ul class="feature-list"><li data-zh="3D 专辑封面墙，可以整屏浏览" data-en="3D album-art wall you can browse full screen">3D 专辑封面墙，可以整屏浏览</li><li data-zh="分屏歌词，横屏观看" data-en="Split-screen lyrics in landscape">分屏歌词，横屏观看</li><li data-zh="完全本地播放，不联网、不收集数据" data-en="Fully offline playback — no network, no tracking">完全本地播放，不联网、不收集数据</li></ul></section>
+      <section><h2 class="sec" data-i18n="shots">截图</h2><div class="shots"><div class="shot-ph" data-zh="截图待补" data-en="Screenshots coming">截图待补</div></div></section>
+      <section><h2 class="sec" data-i18n="logs">更新记录</h2><div class="log"><div class="log-item"><div class="log-head"><span class="log-ver">v1.2.0</span><span class="log-date">2026-11-01</span></div><ul><li>新增分屏歌词</li><li>修复大图集滚动卡顿</li></ul></div><div class="log-item"><div class="log-head"><span class="log-ver">v1.0.0</span><span class="log-date">2026-09-12</span></div><ul><li>首个公开版本</li></ul></div></div></section>
     </div>
 
-    <div class="detail-body">
-      <div class="detail-main">
-        <section><h2 class="sec">截图</h2><div class="shots"><div class="shot-ph">截图待补</div></div></section>
-        <section class="prose">
-          <h2 class="sec">介绍</h2>
-          <p>这段文字是占位示例，换成你自己的介绍就行。建议写清楚：这个软件解决什么问题、适合谁用、有什么不一样的地方。三五句话足够，不用写成说明书。</p>
-        </section>
-        <section><h2 class="sec">功能</h2><ul class="feature-list"><li>3D 专辑封面墙，可以整屏浏览</li><li>分屏歌词，横屏观看</li><li>完全本地播放，不联网、不收集数据</li></ul></section>
-        <section><h2 class="sec">更新记录</h2><div class="log"><div class="log-item"><div class="log-head"><span class="log-ver">v1.2.0</span><span class="log-date">2026-11-01</span></div><ul><li>新增分屏歌词</li><li>修复大图集滚动卡顿</li></ul></div><div class="log-item"><div class="log-head"><span class="log-ver">v1.0.0</span><span class="log-date">2026-09-12</span></div><ul><li>首个公开版本</li></ul></div></div></section>
-      </div>
-
-      <aside class="side">
-        <div class="dl-box"><h3>获取这个软件</h3><p class="dl-note">在应用市场安装，更新由市场自动推送。</p><a class="btn-store" href="https://apps.apple.com/" target="_blank" rel="noopener"><span class="si"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></span><span class="txt"><span class="small">Download on the</span><span class="big">App Store</span></span></a><a class="btn-store" href="https://play.google.com/store/apps" target="_blank" rel="noopener"><span class="si"><svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg></span><span class="txt"><span class="small">GET IT ON</span><span class="big">Google Play</span></span></a></div>
-        <div class="dl-box">
-          <h3>软件信息</h3>
-          <div class="spec"><dt>平台</dt><dd>Android / iOS</dd></div><div class="spec"><dt>版本</dt><dd>v1.2.0</dd></div><div class="spec"><dt>体积</dt><dd>24 MB</dd></div><div class="spec"><dt>更新</dt><dd>2026-11-01</dd></div>
-        </div>
-      </aside>
-    </div>
+    <aside class="side">
+      <div class="dl-box"><h3 data-i18n="getApp">获取这个软件</h3><p class="dl-note" data-zh="在应用市场安装，更新由市场自动推送。" data-en="Install from the store — updates are pushed automatically.">在应用市场安装，更新由市场自动推送。</p><a class="btn-store" href="https://apps.apple.com/" target="_blank" rel="noopener"><span class="si"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></span><span class="txt"><span class="small">Download on the</span><span class="big">App Store</span></span></a><a class="btn-store" href="https://play.google.com/store/apps" target="_blank" rel="noopener"><span class="si"><svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg></span><span class="txt"><span class="small">GET IT ON</span><span class="big">Google Play</span></span></a></div>
+      <div class="spec-card"><div class="spec"><dt data-zh="平台" data-en="Platform">平台</dt><dd>Android / iOS</dd></div><div class="spec"><dt data-zh="版本" data-en="Version">版本</dt><dd>v1.2.0</dd></div><div class="spec"><dt data-zh="体积" data-en="Size">体积</dt><dd>24 MB</dd></div><div class="spec"><dt data-zh="更新" data-en="Updated">更新</dt><dd>2026-11-01</dd></div></div>
+    </aside>
   </div>
+
 </main>
 
-<footer class="site-footer">
+<footer class="footer">
   <div class="wrap">
-    <span>© 2026 软件工坊 · 本站所有软件均为个人作品</span>
-    <div class="footer-links"></div>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand" data-zh="黄彧的杂物间" data-en="Huang Yu's Workshop">黄彧的杂物间</div>
+        <div class="footer-note">本站所有软件均为个人作品</div>
+      </div>
+      <div class="footer-links"><a href="https://github.com/yukkof" target="_blank" rel="noopener">GitHub</a></div>
+    </div>
   </div>
 </footer>
 
