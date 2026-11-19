@@ -14,7 +14,7 @@
       "slug": "duskflow",
       "name": "Duskflow",
       "tagline": "本地音乐播放器，把专辑封面摆成一面可以转动的墙",
-      "platforms": ["Android"],
+      "platforms": ["Android", "iOS"],
       "status": "released",
       "version": "1.2.0",
       "updated": "2026-11-01",
@@ -32,8 +32,8 @@
         "type": "store",
         "note": "在应用市场安装，更新由市场自动推送。",
         "stores": [
-          { "name": "Google Play", "url": "https://play.google.com/store/apps" },
-          { "name": "酷安", "url": "https://www.coolapk.com/" }
+          { "name": "App Store", "url": "https://apps.apple.com/" },
+          { "name": "Google Play", "url": "https://play.google.com/store/apps" }
         ]
       },
       "changelog": [

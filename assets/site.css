@@ -667,6 +667,55 @@ html[data-theme="light"] .btn-primary {
   pointer-events: none;
 }
 
+.btn-store {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  height: 52px;
+  padding: 0 14px;
+  border-radius: 10px;
+  background: #0d0f13;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  transition: 0.16s;
+  margin-bottom: 8px;
+}
+
+.btn-store:last-child {
+  margin-bottom: 0;
+}
+
+.btn-store:hover {
+  transform: translateY(-1px);
+  background: #16191f;
+  border-color: rgba(255, 255, 255, 0.34);
+}
+
+.btn-store .si {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.btn-store .txt {
+  display: block;
+  line-height: 1.15;
+}
+
+.btn-store .small {
+  display: block;
+  font-size: 9.5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.66;
+}
+
+.btn-store .big {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
 .spec {
   display: flex;
   justify-content: space-between;
