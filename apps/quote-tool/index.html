@@ -1,76 +1,80 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>报价单自动生成 · 软件工坊</title>
+<title>报价单自动生成 — 黄彧的杂物间</title>
 <meta name="description" content="填几个参数，直接出一份能发客户的报价单">
-<meta property="og:title" content="报价单自动生成">
-<meta property="og:description" content="填几个参数，直接出一份能发客户的报价单">
+<meta name="theme-color" content="#08090a">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://yukkof.github.io/assets/og.png">
+<meta property="og:title" content="报价单自动生成 — 黄彧的杂物间">
+<meta property="og:description" content="填几个参数，直接出一份能发客户的报价单">
+<meta property="og:image" content="../../assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../../assets/site.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="wrap">
+<div class="nav-shell">
+  <nav class="nav">
     <a class="brand" href="../../index.html">
-      <span class="brand-mark">工</span>
-      <span>软件工坊</span>
+      <span class="mark">彧</span><span data-zh="黄彧的杂物间" data-en="Huang Yu's Workshop">黄彧的杂物间</span>
     </a>
-    <nav class="header-nav">
-      <a href="../../index.html" class="keep">全部软件</a>
+    <div class="nav-links"><a href="https://github.com/yukkof" target="_blank" rel="noopener">GitHub</a></div>
+    <span class="nav-spacer"></span>
+    <div class="lang-switch" id="lang-switch">
+      <button type="button" data-lang="zh" aria-pressed="true">中</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="切换主题"></button>
+  </nav>
+</div>
+
+<main class="wrap detail">
+
+  <a class="back" href="../../index.html">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+    <span data-i18n="back">全部软件</span>
+  </a>
+
+  <header class="detail-head">
+    <div class="app-icon ph" style="background:linear-gradient(155deg,#7ad0ff,#2f7fd6)">报</div>
+    <div class="detail-title">
+      <h1 data-zh="报价单自动生成" data-en="Quote Builder">报价单自动生成</h1>
+      <p class="detail-tagline" data-zh="填几个参数，直接出一份能发客户的报价单" data-en="Fill in a few specs, get a client-ready quote">填几个参数，直接出一份能发客户的报价单</p>
+      <div class="pills"><span class="pill" data-zh="即将上线" data-en="Coming soon">即将上线</span><span class="pill">Windows</span></div>
+    </div>
+  </header>
+
+  <div class="detail-body">
+    <div class="main-col">
+      <section>
+        <h2 class="sec" data-i18n="about">介绍</h2>
+        <p class="prose" data-zh="占位示例文案。还没做完的软件也可以先放上来，让人知道你在做什么。" data-en="Placeholder copy. Unfinished apps can live here too — it shows what you are working on.">占位示例文案。还没做完的软件也可以先放上来，让人知道你在做什么。</p>
+      </section>
+      <section><h2 class="sec" data-i18n="features">功能</h2><ul class="feature-list"><li data-zh="按机型参数自动计算配置清单" data-en="Builds the configuration list from machine specs">按机型参数自动计算配置清单</li><li data-zh="一键导出 PDF 报价单" data-en="Exports a PDF quote in one click">一键导出 PDF 报价单</li></ul></section>
+      <section><h2 class="sec" data-i18n="shots">截图</h2><div class="shots"><div class="shot-ph" data-zh="截图待补" data-en="Screenshots coming">截图待补</div></div></section>
       
-      <button class="icon-btn" id="theme-toggle" aria-label="切换主题"></button>
-    </nav>
-  </div>
-</header>
-
-<main class="detail">
-  <div class="wrap">
-    <a class="back-link" href="../../index.html">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
-      返回全部软件
-    </a>
-
-    <div class="detail-head">
-      <div class="app-icon ph">报</div>
-      <div>
-        <h1>报价单自动生成</h1>
-        <p class="tagline">填几个参数，直接出一份能发客户的报价单</p>
-        <div class="meta-row"><span class="pill">即将上线</span><span class="pill">Windows</span></div>
-      </div>
     </div>
 
-    <div class="detail-body">
-      <div class="detail-main">
-        <section><h2 class="sec">截图</h2><div class="shots"><div class="shot-ph">截图待补</div></div></section>
-        <section class="prose">
-          <h2 class="sec">介绍</h2>
-          <p>占位示例文案。还没做完的软件也可以先放上来，让人知道你在做什么。</p>
-        </section>
-        <section><h2 class="sec">功能</h2><ul class="feature-list"><li>按机型参数自动计算配置清单</li><li>一键导出 PDF 报价单</li></ul></section>
-        
-      </div>
-
-      <aside class="side">
-        <div class="dl-box"><h3>获取这个软件</h3><p class="dl-note">还在做，暂时没有对外发布。做好了会放在这里。</p><span class="btn btn-ghost" aria-disabled="true">暂未发布</span></div>
-        <div class="dl-box">
-          <h3>软件信息</h3>
-          <div class="spec"><dt>平台</dt><dd>Windows</dd></div><div class="spec"><dt>版本</dt><dd>—</dd></div><div class="spec"><dt>体积</dt><dd>—</dd></div><div class="spec"><dt>更新</dt><dd>—</dd></div>
-        </div>
-      </aside>
-    </div>
+    <aside class="side">
+      <div class="dl-box"><h3 data-i18n="getApp">获取这个软件</h3><p class="dl-note" data-zh="还在做，暂时没有对外发布。做好了会放在这里。" data-en="Still in the works — it will show up here when it's ready.">还在做，暂时没有对外发布。做好了会放在这里。</p><span class="btn btn-ghost" aria-disabled="true" data-i18n="notYet">暂未发布</span></div>
+      <div class="spec-card"><div class="spec"><dt data-zh="平台" data-en="Platform">平台</dt><dd>Windows</dd></div><div class="spec"><dt data-zh="版本" data-en="Version">版本</dt><dd>—</dd></div><div class="spec"><dt data-zh="体积" data-en="Size">体积</dt><dd>—</dd></div><div class="spec"><dt data-zh="更新" data-en="Updated">更新</dt><dd>—</dd></div></div>
+    </aside>
   </div>
+
 </main>
 
-<footer class="site-footer">
+<footer class="footer">
   <div class="wrap">
-    <span>© 2026 软件工坊 · 本站所有软件均为个人作品</span>
-    <div class="footer-links"></div>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand" data-zh="黄彧的杂物间" data-en="Huang Yu's Workshop">黄彧的杂物间</div>
+        <div class="footer-note">本站所有软件均为个人作品</div>
+      </div>
+      <div class="footer-links"><a href="https://github.com/yukkof" target="_blank" rel="noopener">GitHub</a></div>
+    </div>
   </div>
 </footer>
 

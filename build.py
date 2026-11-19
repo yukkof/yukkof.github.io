@@ -17,10 +17,20 @@ DATA = os.path.join(BASE, "data", "apps.json")
 TPL = os.path.join(BASE, "templates")
 
 STATUS_LABEL = {
-    "released": "已发布",
-    "beta": "测试版",
-    "coming": "即将上线",
+    "released": ("已发布", "Released"),
+    "beta": ("测试版", "Beta"),
+    "coming": ("即将上线", "Coming soon"),
 }
+
+ICON_GRADIENTS = [
+    ("#7b8cff", "#4451c9"),
+    ("#45d69b", "#128f63"),
+    ("#f0b429", "#c07a12"),
+    ("#ff7ea8", "#c4356b"),
+    ("#7ad0ff", "#2f7fd6"),
+    ("#c69bff", "#7b46d6"),
+    ("#ff9d6b", "#c9552b"),
+]
 
 
 def esc(text):
@@ -53,16 +63,25 @@ def icon_html(app, size_class=""):
             esc(name),
         )
     letter = (app.get("name") or "?")[:1].upper()
-    return '<div class="%s ph">%s</div>' % (cls.strip(), esc(letter))
+    seed = sum(ord(c) for c in (app.get("name") or "?"))
+    c1, c2 = ICON_GRADIENTS[seed % len(ICON_GRADIENTS)]
+    return '<div class="%s ph" style="background:linear-gradient(155deg,%s,%s)">%s</div>' % (
+        cls.strip(),
+        c1,
+        c2,
+        esc(letter),
+    )
 
 
 def pills_html(app, with_status=True):
     parts = []
     if with_status:
         st = app.get("status", "released")
-        label = STATUS_LABEL.get(st, st)
+        zh, en = STATUS_LABEL.get(st, (st, st))
         cls = "pill accent" if st == "released" else ("pill warn" if st == "beta" else "pill")
-        parts.append('<span class="%s">%s</span>' % (cls, esc(label)))
+        parts.append(
+            '<span class="%s" data-zh="%s" data-en="%s">%s</span>' % (cls, esc(zh), esc(en), esc(zh))
+        )
     for p in app.get("platforms", []):
         parts.append('<span class="pill">%s</span>' % esc(p))
     ver = (app.get("version") or "").strip()
@@ -142,38 +161,45 @@ def download_html(app):
     dl = app.get("download") or {}
     kind = (dl.get("type") or "none").lower()
     note = dl.get("note") or ""
+    note_en = dl.get("noteEn") or note
     btns = []
 
     if kind == "github" and dl.get("url"):
         btns.append(
             '<a class="btn btn-primary" href="%s" target="_blank" rel="noopener">'
-            "%s</a>"
-            % (esc(dl["url"]), DOWNLOAD_ICON + "下载")
+            "%s<span data-i18n=\"download\">下载</span></a>"
+            % (esc(dl["url"]), DOWNLOAD_ICON)
         )
         if not note:
             note = "从 GitHub Releases 下载，免费使用。"
+            note_en = "Download from GitHub Releases. Free to use."
     elif kind == "store":
         stores = dl.get("stores") or []
         for s in stores:
             btns.append(store_btn(s.get("name", ""), s.get("url", "#")))
         if not note:
             note = "在应用市场安装，更新由市场自动推送。"
+            note_en = "Install from the store — updates are pushed automatically."
     elif kind == "direct" and dl.get("url"):
         btns.append(
-            '<a class="btn btn-primary" href="{{ASSETS}}%s" download>%s</a>'
-            % (esc(dl["url"]), DOWNLOAD_ICON + "下载")
+            '<a class="btn btn-primary" href="{{ASSETS}}%s" download>'
+            '%s<span data-i18n="download">下载</span></a>'
+            % (esc(dl["url"]), DOWNLOAD_ICON)
         )
     else:
-        btns.append('<span class="btn btn-ghost" aria-disabled="true">暂未发布</span>')
+        btns.append(
+            '<span class="btn btn-ghost" aria-disabled="true" data-i18n="notYet">暂未发布</span>'
+        )
         if not note:
             note = "还在做，做好了会放在这里。"
+            note_en = "Still in the works — it will show up here when it's ready."
 
     return (
         '<div class="dl-box">'
-        "<h3>获取这个软件</h3>"
-        '<p class="dl-note">%s</p>'
+        '<h3 data-i18n="getApp">获取这个软件</h3>'
+        '<p class="dl-note" data-zh="%s" data-en="%s">%s</p>'
         "%s"
-        "</div>" % (esc(note), "".join(btns))
+        "</div>" % (esc(note), esc(note_en), esc(note), "".join(btns))
     )
 
 
@@ -192,12 +218,14 @@ ARROW_ICON = (
 
 def spec_rows(app):
     rows = []
-    rows.append(("平台", " / ".join(app.get("platforms", [])) or "—"))
-    rows.append(("版本", ("v" + app["version"]) if app.get("version") else "—"))
-    rows.append(("体积", app.get("size") or "—"))
-    rows.append(("更新", app.get("updated") or "—"))
+    rows.append((("平台", "Platform"), " / ".join(app.get("platforms", [])) or "—"))
+    rows.append((("版本", "Version"), ("v" + app["version"]) if app.get("version") else "—"))
+    rows.append((("体积", "Size"), app.get("size") or "—"))
+    rows.append((("更新", "Updated"), app.get("updated") or "—"))
     return "".join(
-        '<div class="spec"><dt>%s</dt><dd>%s</dd></div>' % (esc(k), esc(v)) for k, v in rows
+        '<div class="spec"><dt data-zh="%s" data-en="%s">%s</dt><dd>%s</dd></div>'
+        % (esc(k[0]), esc(k[1]), esc(k[0]), esc(v))
+        for k, v in rows
     )
 
 
@@ -205,10 +233,14 @@ def features_html(app):
     feats = app.get("features") or []
     if not feats:
         return ""
-    items = "".join("<li>%s</li>" % esc(f) for f in feats)
+    feats_en = app.get("featuresEn") or []
+    items = []
+    for i, f in enumerate(feats):
+        en = feats_en[i] if i < len(feats_en) and feats_en[i] else f
+        items.append('<li data-zh="%s" data-en="%s">%s</li>' % (esc(f), esc(en), esc(f)))
     return (
-        "<section><h2 class=\"sec\">功能</h2>"
-        '<ul class="feature-list">%s</ul></section>' % items
+        '<section><h2 class="sec" data-i18n="features">功能</h2>'
+        '<ul class="feature-list">%s</ul></section>' % "".join(items)
     )
 
 
@@ -216,12 +248,15 @@ def shots_html(app):
     shots = app.get("screenshots") or []
     if shots:
         inner = "".join(
-            '<img src="{{ASSETS}}%s" alt="%s 截图">' % (esc(s), esc(app.get("name", "")))
+            '<img src="{{ASSETS}}%s" alt="%s 截图" loading="lazy">' % (esc(s), esc(app.get("name", "")))
             for s in shots
         )
     else:
-        inner = '<div class="shot-ph">截图待补</div>'
-    return '<section><h2 class="sec">截图</h2><div class="shots">%s</div></section>' % inner
+        inner = '<div class="shot-ph" data-zh="截图待补" data-en="Screenshots coming">截图待补</div>'
+    return (
+        '<section><h2 class="sec" data-i18n="shots">截图</h2><div class="shots">%s</div></section>'
+        % inner
+    )
 
 
 def changelog_html(app):
@@ -239,31 +274,53 @@ def changelog_html(app):
             % (esc(log.get("version", "")), esc(log.get("date", "")), notes)
         )
     return (
-        '<section><h2 class="sec">更新记录</h2><div class="log">%s</div></section>'
+        '<section><h2 class="sec" data-i18n="logs">更新记录</h2><div class="log">%s</div></section>'
         % "".join(items)
     )
 
 
-def card_html(app):
+def card_html(app, featured=False):
     slug = app["slug"]
     text = " ".join(
         [app.get("name", ""), app.get("tagline", "")] + list(app.get("platforms", []))
     )
-    badge = '<span class="sample-badge">示例</span>' if app.get("sample") else ""
+    text_en = " ".join(
+        [
+            app.get("nameEn", "") or app.get("name", ""),
+            app.get("taglineEn", "") or app.get("tagline", ""),
+        ]
+        + list(app.get("platforms", []))
+    )
+    badge = (
+        '<span class="sample-badge" data-zh="示例" data-en="Sample">示例</span>'
+        if app.get("sample")
+        else ""
+    )
+    name = app.get("name", "")
+    name_en = app.get("nameEn") or name
+    tagline = app.get("tagline", "")
+    tagline_en = app.get("taglineEn") or tagline
     return (
-        '<a class="card" href="{{ASSETS}}apps/%s/index.html" '
-        'data-platforms="%s" data-text="%s">%s'
+        '<a class="card%s" href="{{ASSETS}}apps/%s/index.html" '
+        'data-platforms="%s" data-text="%s" data-text-en="%s">%s'
         '<div class="card-top">%s'
-        '<div><h3>%s</h3><p class="tagline">%s</p></div></div>'
+        '<div><h3 data-zh="%s" data-en="%s">%s</h3>'
+        '<p class="tagline" data-zh="%s" data-en="%s">%s</p></div></div>'
         '<div class="card-bottom">%s<span class="card-arrow">%s</span></div></a>'
     ) % (
+        " grand" if featured else "",
         esc(slug),
         esc(",".join(app.get("platforms", []))),
         esc(text),
+        esc(text_en),
         badge,
         icon_html(app),
-        esc(app.get("name", "")),
-        esc(app.get("tagline", "")),
+        esc(name),
+        esc(name_en),
+        esc(name),
+        esc(tagline),
+        esc(tagline_en),
+        esc(tagline),
         pills_html(app),
         ARROW_ICON,
     )
@@ -307,11 +364,14 @@ def main():
                 platforms.append(p)
     platforms.sort()
 
-    chips = ['<button class="chip" data-platform="all" aria-pressed="true">全部</button>']
+    chips = ['<button class="chip" data-platform="all" aria-pressed="true" data-zh="全部" data-en="All">全部</button>']
     for p in platforms:
-        chips.append('<button class="chip" data-platform="%s" aria-pressed="false">%s</button>' % (esc(p), esc(p)))
+        chips.append(
+            '<button class="chip" data-platform="%s" aria-pressed="false" data-zh="%s" data-en="%s">%s</button>'
+            % (esc(p), esc(p), esc(p), esc(p))
+        )
 
-    cards = "".join(card_html(a) for a in apps) or (
+    cards = "".join(card_html(a, featured=(i == 0)) for i, a in enumerate(apps)) or (
         '<div class="empty">还没有软件，去 data/apps.json 里加一个吧。</div>'
     )
 
@@ -329,9 +389,12 @@ def main():
 
     common = {
         "SITE_NAME": esc(site.get("name", "我的软件")),
+        "SITE_NAME_EN": esc(site.get("nameEn", "") or site.get("name", "我的软件")),
         "BRAND_LETTER": esc(site.get("brandLetter", "S")),
         "TAGLINE": esc(site.get("tagline", "")),
+        "TAGLINE_EN": esc(site.get("taglineEn", "") or site.get("tagline", "")),
         "INTRO": esc(site.get("intro", "")),
+        "INTRO_EN": esc(site.get("introEn", "") or site.get("intro", "")),
         "COPYRIGHT": esc(site.get("copyright", "")),
         "EMAIL": esc(email),
         "GITHUB": esc(github),
@@ -360,10 +423,13 @@ def main():
                 common,
                 ASSETS="{{ASSETS}}",
                 NAME=esc(a.get("name", "")),
+                NAME_EN=esc(a.get("nameEn", "") or a.get("name", "")),
                 APP_TAGLINE=esc(a.get("tagline", "")),
+                APP_TAGLINE_EN=esc(a.get("taglineEn", "") or a.get("tagline", "")),
                 ICON=icon_html(a),
                 PILLS=pills_html(a),
                 DESCRIPTION=esc(a.get("description", "")),
+                DESCRIPTION_EN=esc(a.get("descriptionEn", "") or a.get("description", "")),
                 FEATURES=features_html(a),
                 SHOTS=shots_html(a),
                 SPEC=spec_rows(a),
