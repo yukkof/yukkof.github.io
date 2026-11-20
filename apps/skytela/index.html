@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SkytelaPlayer — 黄彧的杂物间</title>
-<meta name="description" content="visionOS 上的空间视频播放器">
+<title>Skytela Player — 黄彧的杂物间</title>
+<meta name="description" content="躺着看的空间私人影院，全格式解码">
 <meta name="theme-color" content="#08090a">
 <meta property="og:type" content="website">
-<meta property="og:title" content="SkytelaPlayer — 黄彧的杂物间">
-<meta property="og:description" content="visionOS 上的空间视频播放器">
+<meta property="og:title" content="Skytela Player — 黄彧的杂物间">
+<meta property="og:description" content="躺着看的空间私人影院，全格式解码">
 <meta property="og:image" content="../../assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
@@ -21,7 +21,7 @@
     <a class="brand" href="../../index.html">
       <span class="mark">彧</span><span data-zh="黄彧的杂物间" data-en="Huang Yu's Workshop">黄彧的杂物间</span>
     </a>
-    <div class="nav-links"><a href="https://github.com/yukkof" target="_blank" rel="noopener">GitHub</a></div>
+    <div class="nav-links"><a href="pricing.html" data-zh="定价" data-en="Pricing">定价</a><a href="https://github.com/yukkof" target="_blank" rel="noopener">GitHub</a><a href="mailto:495509885@qq.com" data-zh="联系" data-en="Contact">联系</a></div>
     <span class="nav-spacer"></span>
     <div class="lang-switch" id="lang-switch">
       <button type="button" data-lang="zh" aria-pressed="true">中</button>
@@ -39,11 +39,11 @@
   </a>
 
   <header class="detail-head">
-    <div class="app-icon ph" style="background:linear-gradient(155deg,#ff7ea8,#c4356b)">S</div>
+    <img class="app-icon" src="../../assets/img/skytela-icon.jpg" alt="Skytela Player">
     <div class="detail-title">
-      <h1 data-zh="SkytelaPlayer" data-en="SkytelaPlayer">SkytelaPlayer</h1>
-      <p class="detail-tagline" data-zh="visionOS 上的空间视频播放器" data-en="A spatial video player for visionOS">visionOS 上的空间视频播放器</p>
-      <div class="pills"><span class="pill accent" data-zh="已发布" data-en="Released">已发布</span><span class="pill">visionOS</span><span class="pill">v1.7.1</span></div>
+      <h1 data-zh="Skytela Player" data-en="Skytela Player">Skytela Player</h1>
+      <p class="detail-tagline" data-zh="躺着看的空间私人影院，全格式解码" data-en="A spatial cinema you can watch lying down">躺着看的空间私人影院，全格式解码</p>
+      <div class="pills"><span class="pill accent" data-zh="已发布" data-en="Released">已发布</span><span class="pill">visionOS</span><span class="pill">v5.0</span></div>
     </div>
   </header>
 
@@ -51,16 +51,34 @@
     <div class="main-col">
       <section>
         <h2 class="sec" data-i18n="about">介绍</h2>
-        <p class="prose" data-zh="占位示例文案。这里可以写软件的核心玩法、支持哪些格式、对设备有什么要求。" data-en="Placeholder copy. Describe the core idea, which formats are supported, and what devices it runs on.">占位示例文案。这里可以写软件的核心玩法、支持哪些格式、对设备有什么要求。</p>
+        <p class="prose" data-zh="给 Apple Vision Pro 做的空间视频播放器。屏幕可以放到墙上、半空、或者头顶，然后躺下看。
+
+窗口、沉浸、影院三种模式随时切换；曲率 0° 到 180° 自由调节，让画面包住视野，边缘不变形。环境可以无级调暗到全黑，暂停时自动把环境提亮。
+
+解码是重点：MKV、RMVB、AVI、FLV、WMV、TS、WebM、MP4、MOV、HLS 都能直接打开，视频支持 HEVC、H.264、VP9、ProRes、MPEG-2、VC-1，音频支持 DTS、TrueHD、FLAC、Opus、APE。字幕自动识别 GB18030 / Big5 编码，支持 SRT、ASS、SSA、VTT。Enhanced 3D 能把普通 2D 影片实时转成立体画面。
+
+还内置完整文件管理器：SMB 直连电脑共享文件夹、NAS 浏览、解压、文本编辑器改字幕、缩略图缓存。外加音乐播放和全景照片浏览。" data-en="A spatial video player for Apple Vision Pro. Put the screen on a wall, in mid-air, or overhead — then lie back.
+
+Window, Immersive and Cinema modes switch on the fly. Curve the screen anywhere from 0° to 180° so the picture wraps around your view without edge distortion. Dim the surroundings continuously to full black, and it brightens again automatically when you pause.
+
+Decoding is the point: MKV, RMVB, AVI, FLV, WMV, TS, WebM, MP4, MOV and HLS open natively, with HEVC, H.264, VP9, ProRes, MPEG-2 and VC-1 video, plus DTS, TrueHD, FLAC, Opus and APE audio. Subtitles auto-detect GB18030 / Big5 encodings and support SRT, ASS, SSA and VTT. Enhanced 3D converts ordinary 2D films into stereoscopic video in real time.
+
+It also includes a full file manager: SMB connections to your computer, NAS browsing, archive extraction, a text editor for fixing subtitle files, and thumbnail caching. Music playback and panorama viewing come along too.">给 Apple Vision Pro 做的空间视频播放器。屏幕可以放到墙上、半空、或者头顶，然后躺下看。
+
+窗口、沉浸、影院三种模式随时切换；曲率 0° 到 180° 自由调节，让画面包住视野，边缘不变形。环境可以无级调暗到全黑，暂停时自动把环境提亮。
+
+解码是重点：MKV、RMVB、AVI、FLV、WMV、TS、WebM、MP4、MOV、HLS 都能直接打开，视频支持 HEVC、H.264、VP9、ProRes、MPEG-2、VC-1，音频支持 DTS、TrueHD、FLAC、Opus、APE。字幕自动识别 GB18030 / Big5 编码，支持 SRT、ASS、SSA、VTT。Enhanced 3D 能把普通 2D 影片实时转成立体画面。
+
+还内置完整文件管理器：SMB 直连电脑共享文件夹、NAS 浏览、解压、文本编辑器改字幕、缩略图缓存。外加音乐播放和全景照片浏览。</p>
       </section>
-      <section><h2 class="sec" data-i18n="features">功能</h2><ul class="feature-list"><li data-zh="支持常见视频格式直接播放" data-en="Plays common video formats directly">支持常见视频格式直接播放</li><li data-zh="空间化播放窗口，可自由摆放" data-en="Spatial window you can place anywhere">空间化播放窗口，可自由摆放</li><li data-zh="支持外挂字幕" data-en="External subtitle support">支持外挂字幕</li></ul></section>
-      <section><h2 class="sec" data-i18n="shots">截图</h2><div class="shots"><div class="shot-ph" data-zh="截图待补" data-en="Screenshots coming">截图待补</div></div></section>
-      <section><h2 class="sec" data-i18n="logs">更新记录</h2><div class="log"><div class="log-item"><div class="log-head"><span class="log-ver">v1.7.1</span><span class="log-date">2026-10-20</span></div><ul><li>修复部分文件无法识别音轨</li></ul></div></div></section>
+      <section><h2 class="sec" data-i18n="features">功能</h2><ul class="feature-list"><li data-zh="窗口 / 沉浸 / 影院三种模式，曲率 0°–180° 可调" data-en="Window / Immersive / Cinema modes with 0°–180° curvature">窗口 / 沉浸 / 影院三种模式，曲率 0°–180° 可调</li><li data-zh="MKV / RMVB / AVI / FLV / WMV / TS / WebM / HLS 直接打开" data-en="Opens MKV, RMVB, AVI, FLV, WMV, TS, WebM and HLS directly">MKV / RMVB / AVI / FLV / WMV / TS / WebM / HLS 直接打开</li><li data-zh="DTS、TrueHD、FLAC、APE 音频，HEVC / ProRes / VP9 视频" data-en="DTS, TrueHD, FLAC, APE audio; HEVC, ProRes, VP9 video">DTS、TrueHD、FLAC、APE 音频，HEVC / ProRes / VP9 视频</li><li data-zh="字幕自动识别 GB18030 / Big5，支持 SRT / ASS / SSA / VTT" data-en="Auto-detects GB18030 / Big5 subtitles; SRT, ASS, SSA, VTT">字幕自动识别 GB18030 / Big5，支持 SRT / ASS / SSA / VTT</li><li data-zh="Enhanced 3D 把 2D 影片实时转成立体画面" data-en="Enhanced 3D turns 2D films into stereoscopic video live">Enhanced 3D 把 2D 影片实时转成立体画面</li><li data-zh="内置文件管理器，SMB 连电脑、NAS 浏览、解压、改字幕" data-en="Built-in file manager with SMB, NAS browsing and archive extraction">内置文件管理器，SMB 连电脑、NAS 浏览、解压、改字幕</li></ul></section>
+      <section><h2 class="sec" data-i18n="shots">截图</h2><div class="shots"><img src="../../assets/img/skytela-cover.jpg" alt="Skytela Player 截图" loading="lazy"></div></section>
+      
     </div>
 
     <aside class="side">
-      <div class="dl-box"><h3 data-i18n="getApp">获取这个软件</h3><p class="dl-note" data-zh="从 GitHub Releases 下载，永久免费。" data-en="Download from GitHub Releases. Free forever.">从 GitHub Releases 下载，永久免费。</p><a class="btn btn-primary" href="https://github.com/" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg><span data-i18n="download">下载</span></a></div>
-      <div class="spec-card"><div class="spec"><dt data-zh="平台" data-en="Platform">平台</dt><dd>visionOS</dd></div><div class="spec"><dt data-zh="版本" data-en="Version">版本</dt><dd>v1.7.1</dd></div><div class="spec"><dt data-zh="体积" data-en="Size">体积</dt><dd>38 MB</dd></div><div class="spec"><dt data-zh="更新" data-en="Updated">更新</dt><dd>2026-10-20</dd></div></div>
+      <div class="dl-box"><h3 data-i18n="getApp">获取这个软件</h3><p class="dl-note" data-zh="一次性买断，无内购、无订阅、不收集数据。" data-en="One-time purchase. No in-app purchases, no subscription, no data collection.">一次性买断，无内购、无订阅、不收集数据。</p><a class="btn-store" href="https://apps.apple.com/cn/app/skytela-player/id6818142778" target="_blank" rel="noopener"><span class="si"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></span><span class="txt"><span class="small">Download on the</span><span class="big">App Store</span></span></a></div>
+      <div class="spec-card"><div class="spec"><dt data-zh="平台" data-en="Platform">平台</dt><dd>visionOS</dd></div><div class="spec"><dt data-zh="版本" data-en="Version">版本</dt><dd>v5.0</dd></div><div class="spec"><dt data-zh="体积" data-en="Size">体积</dt><dd>38.1 MB</dd></div><div class="spec"><dt data-zh="更新" data-en="Updated">更新</dt><dd>2026-11-04</dd></div></div>
     </aside>
   </div>
 
@@ -71,9 +89,9 @@
     <div class="footer-inner">
       <div>
         <div class="footer-brand" data-zh="黄彧的杂物间" data-en="Huang Yu's Workshop">黄彧的杂物间</div>
-        <div class="footer-note">本站所有软件均为个人作品</div>
+        <div class="footer-note" data-zh="本站所有软件均为个人作品" data-en="All apps here are personal projects.">本站所有软件均为个人作品</div>
       </div>
-      <div class="footer-links"><a href="https://github.com/yukkof" target="_blank" rel="noopener">GitHub</a></div>
+      <div class="footer-links"><a href="pricing.html" data-zh="定价" data-en="Pricing">定价</a><a href="terms.html" data-zh="服务条款" data-en="Terms">服务条款</a><a href="privacy.html" data-zh="隐私政策" data-en="Privacy">隐私政策</a><a href="https://github.com/yukkof" target="_blank" rel="noopener">GitHub</a><a href="mailto:495509885@qq.com">495509885@qq.com</a></div>
     </div>
   </div>
 </footer>

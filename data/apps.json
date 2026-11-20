@@ -4,199 +4,307 @@
     "brandLetter": "彧",
     "tagline": "我做的一些小软件，都在这里",
     "taglineEn": "Small apps I build — all in one place.",
-    "intro": "从 Windows 工具到 Android 应用，都是自己日常在用、顺手做出来给别人也用的东西。免费的可以直接下载，上架的请到应用市场安装。",
-    "introEn": "From Windows utilities to Android apps — tools I use every day, built for others too. Free ones download straight from here; published ones install from the App Store or Google Play.",
+    "intro": "大部分是给 Apple Vision Pro 做的：空间影院、CAD 查看器、空间看图、曲面远程桌面，还有一个弧形标签页的浏览器。也有给 Windows 和安卓写的本地音乐播放器。全部一次性买断，没有订阅、不用注册账号、不联网也不上传。",
+    "introEn": "Mostly apps for Apple Vision Pro — a spatial cinema, a CAD viewer, a spatial photo explorer, a curved-screen remote desktop, and a browser with curved tabs. Plus a local music player for Windows and Android. All one-time purchase: no subscription, no account, nothing uploaded.",
     "author": "黄彧",
-    "email": "",
+    "email": "495509885@qq.com",
     "github": "https://github.com/yukkof",
     "copyright": "本站所有软件均为个人作品",
-    "nameEn": "Huang Yu's Workshop"
+    "nameEn": "Huang Yu's Workshop",
+    "copyrightEn": "All apps here are personal projects."
   },
   "apps": [
     {
       "slug": "duskflow",
       "name": "Duskflow",
       "nameEn": "Duskflow",
-      "tagline": "本地音乐播放器，把专辑封面摆成一面可以转动的墙",
-      "taglineEn": "A local music player that turns album art into a wall you can spin",
+      "tagline": "本地音乐播放器，专辑封面摆成一面可以转动的墙",
+      "taglineEn": "A local music player with album art in 3D",
       "platforms": [
-        "Android",
-        "iOS"
+        "visionOS",
+        "Windows",
+        "Android"
       ],
       "status": "released",
-      "version": "1.2.0",
-      "updated": "2026-11-01",
-      "size": "24 MB",
-      "icon": "",
-      "screenshots": [],
-      "sample": true,
-      "description": "这段文字是占位示例，换成你自己的介绍就行。建议写清楚：这个软件解决什么问题、适合谁用、有什么不一样的地方。三五句话足够，不用写成说明书。",
-      "descriptionEn": "Placeholder copy — replace it with your own. Explain what problem the app solves, who it is for, and what makes it different. Three to five sentences is plenty.",
+      "version": "1.1",
+      "updated": "2026-10-07",
+      "size": "170 MB",
+      "icon": "assets/img/duskflow-icon.jpg",
+      "screenshots": [
+        "assets/img/duskflow-1.jpg",
+        "assets/img/duskflow-2.jpg",
+        "assets/img/duskflow-3.jpg"
+      ],
+      "description": "Duskflow 是一个本地音乐播放器。它不联网、不接管你的音乐库、不复制也不转换文件——你放在哪里的歌，它就在哪里播。\n\n最有辨识度的是 Album Flow：滚动鼠标滚轮，专辑封面像指尖下的卡片一样滑过，带弹簧惯性、封面倒影和舞台灯光。这是纯物理驱动的 3D 浏览，不是一排放大的方块。不想要 3D 也没关系，随时切回列表、专辑列表或网格。\n\nWindows 版还有全局快捷键，切歌和暂停不用切窗口；支持 mp3、m4a、aac、flac、wav、ogg、opus。visionOS 版把专辑墙搬进了混合现实空间，在沉浸环境里听歌。\n\n隐私上很简单：全程离线运行，没有网络请求、不收集数据、不上传，你的音乐永远在你的电脑里。",
+      "descriptionEn": "Duskflow is a local music player. It never goes online, never takes over your library, and never copies or converts your files — your music plays right where it lives.\n\nWhat sets it apart is Album Flow: scroll the wheel and album covers glide past like cards under your fingertip, with spring motion, cover reflections and stage lighting. It is physics-driven 3D browsing, not a row of enlarged tiles. Prefer a plain view? Switch to list, album list or grid at any time.\n\nThe Windows build adds global hotkeys so you can skip and pause without switching windows, and reads mp3, m4a, aac, flac, wav, ogg and opus. The visionOS build brings the album wall into mixed reality.\n\nOn privacy: it runs fully offline. No network access, no data collection, no uploads — your music never leaves your device.",
       "features": [
-        "3D 专辑封面墙，可以整屏浏览",
-        "分屏歌词，横屏观看",
-        "完全本地播放，不联网、不收集数据"
+        "Album Flow 3D 专辑墙，弹簧惯性 + 封面倒影 + 舞台灯光",
+        "列表 / 专辑列表 / 网格三种视图随时切换",
+        "就地播放，不移动、不复制、不转换原文件",
+        "Windows 全局快捷键，切歌暂停不用切窗口",
+        "支持 mp3 / m4a / aac / flac / wav / ogg / opus",
+        "全程离线，无网络请求、不收集数据"
       ],
       "featuresEn": [
-        "3D album-art wall you can browse full screen",
-        "Split-screen lyrics in landscape",
-        "Fully offline playback — no network, no tracking"
+        "Album Flow 3D wall with spring physics, reflections and stage lighting",
+        "Switch between list, album list and grid any time",
+        "Plays in place — nothing moved, copied or converted",
+        "Global hotkeys on Windows to skip and pause from anywhere",
+        "Supports mp3 / m4a / aac / flac / wav / ogg / opus",
+        "Fully offline: no network access, no data collection"
       ],
       "download": {
         "type": "store",
-        "note": "在应用市场安装，更新由市场自动推送。",
-        "noteEn": "Install from the store — updates are pushed automatically.",
+        "note": "三个平台各自买断，互不通用。没有订阅，也没有内购。",
+        "noteEn": "One-time purchase per platform. No subscription, no in-app purchases.",
         "stores": [
           {
             "name": "App Store",
-            "url": "https://apps.apple.com/"
+            "url": "https://apps.apple.com/cn/app/duskflow/id6816608893"
           },
           {
-            "name": "Google Play",
-            "url": "https://play.google.com/store/apps"
+            "name": "Microsoft Store",
+            "url": "https://apps.microsoft.com/detail/9N0TBKBF85KN"
           }
         ]
-      },
-      "changelog": [
-        {
-          "version": "1.2.0",
-          "date": "2026-11-01",
-          "notes": [
-            "新增分屏歌词",
-            "修复大图集滚动卡顿"
-          ]
-        },
-        {
-          "version": "1.0.0",
-          "date": "2026-09-12",
-          "notes": [
-            "首个公开版本"
-          ]
-        }
-      ]
+      }
     },
     {
       "slug": "skytela",
-      "name": "SkytelaPlayer",
-      "nameEn": "SkytelaPlayer",
-      "tagline": "visionOS 上的空间视频播放器",
-      "taglineEn": "A spatial video player for visionOS",
+      "name": "Skytela Player",
+      "nameEn": "Skytela Player",
+      "tagline": "躺着看的空间私人影院，全格式解码",
+      "taglineEn": "A spatial cinema you can watch lying down",
       "platforms": [
         "visionOS"
       ],
       "status": "released",
-      "version": "1.7.1",
-      "updated": "2026-10-20",
-      "size": "38 MB",
-      "icon": "",
-      "screenshots": [],
-      "sample": true,
-      "description": "占位示例文案。这里可以写软件的核心玩法、支持哪些格式、对设备有什么要求。",
-      "descriptionEn": "Placeholder copy. Describe the core idea, which formats are supported, and what devices it runs on.",
+      "version": "5.0",
+      "updated": "2026-11-04",
+      "size": "38.1 MB",
+      "icon": "assets/img/skytela-icon.jpg",
+      "screenshots": [
+        "assets/img/skytela-cover.jpg"
+      ],
+      "description": "给 Apple Vision Pro 做的空间视频播放器。屏幕可以放到墙上、半空、或者头顶，然后躺下看。\n\n窗口、沉浸、影院三种模式随时切换；曲率 0° 到 180° 自由调节，让画面包住视野，边缘不变形。环境可以无级调暗到全黑，暂停时自动把环境提亮。\n\n解码是重点：MKV、RMVB、AVI、FLV、WMV、TS、WebM、MP4、MOV、HLS 都能直接打开，视频支持 HEVC、H.264、VP9、ProRes、MPEG-2、VC-1，音频支持 DTS、TrueHD、FLAC、Opus、APE。字幕自动识别 GB18030 / Big5 编码，支持 SRT、ASS、SSA、VTT。Enhanced 3D 能把普通 2D 影片实时转成立体画面。\n\n还内置完整文件管理器：SMB 直连电脑共享文件夹、NAS 浏览、解压、文本编辑器改字幕、缩略图缓存。外加音乐播放和全景照片浏览。",
+      "descriptionEn": "A spatial video player for Apple Vision Pro. Put the screen on a wall, in mid-air, or overhead — then lie back.\n\nWindow, Immersive and Cinema modes switch on the fly. Curve the screen anywhere from 0° to 180° so the picture wraps around your view without edge distortion. Dim the surroundings continuously to full black, and it brightens again automatically when you pause.\n\nDecoding is the point: MKV, RMVB, AVI, FLV, WMV, TS, WebM, MP4, MOV and HLS open natively, with HEVC, H.264, VP9, ProRes, MPEG-2 and VC-1 video, plus DTS, TrueHD, FLAC, Opus and APE audio. Subtitles auto-detect GB18030 / Big5 encodings and support SRT, ASS, SSA and VTT. Enhanced 3D converts ordinary 2D films into stereoscopic video in real time.\n\nIt also includes a full file manager: SMB connections to your computer, NAS browsing, archive extraction, a text editor for fixing subtitle files, and thumbnail caching. Music playback and panorama viewing come along too.",
       "features": [
-        "支持常见视频格式直接播放",
-        "空间化播放窗口，可自由摆放",
-        "支持外挂字幕"
+        "窗口 / 沉浸 / 影院三种模式，曲率 0°–180° 可调",
+        "MKV / RMVB / AVI / FLV / WMV / TS / WebM / HLS 直接打开",
+        "DTS、TrueHD、FLAC、APE 音频，HEVC / ProRes / VP9 视频",
+        "字幕自动识别 GB18030 / Big5，支持 SRT / ASS / SSA / VTT",
+        "Enhanced 3D 把 2D 影片实时转成立体画面",
+        "内置文件管理器，SMB 连电脑、NAS 浏览、解压、改字幕"
       ],
       "featuresEn": [
-        "Plays common video formats directly",
-        "Spatial window you can place anywhere",
-        "External subtitle support"
+        "Window / Immersive / Cinema modes with 0°–180° curvature",
+        "Opens MKV, RMVB, AVI, FLV, WMV, TS, WebM and HLS directly",
+        "DTS, TrueHD, FLAC, APE audio; HEVC, ProRes, VP9 video",
+        "Auto-detects GB18030 / Big5 subtitles; SRT, ASS, SSA, VTT",
+        "Enhanced 3D turns 2D films into stereoscopic video live",
+        "Built-in file manager with SMB, NAS browsing and archive extraction"
       ],
       "download": {
-        "type": "github",
-        "note": "从 GitHub Releases 下载，永久免费。",
-        "noteEn": "Download from GitHub Releases. Free forever.",
-        "url": "https://github.com/"
-      },
-      "changelog": [
-        {
-          "version": "1.7.1",
-          "date": "2026-10-20",
-          "notes": [
-            "修复部分文件无法识别音轨"
-          ]
-        }
-      ]
+        "type": "store",
+        "note": "一次性买断，无内购、无订阅、不收集数据。",
+        "noteEn": "One-time purchase. No in-app purchases, no subscription, no data collection.",
+        "stores": [
+          {
+            "name": "App Store",
+            "url": "https://apps.apple.com/cn/app/skytela-player/id6818142778"
+          }
+        ]
+      }
     },
     {
-      "slug": "wtl-schedule",
-      "name": "项目排程工作台",
-      "nameEn": "Schedule Studio",
-      "tagline": "单文件甘特图工具，拷到哪台电脑都能直接用",
-      "taglineEn": "A single-file Gantt tool you can carry on a USB stick",
+      "slug": "photo3dx",
+      "name": "Photo3DX",
+      "nameEn": "Photo3DX",
+      "tagline": "空间看图，全景照片把你整个人包住",
+      "taglineEn": "Spatial photo explorer with real depth",
       "platforms": [
-        "Windows",
-        "Web"
+        "visionOS"
       ],
-      "status": "beta",
-      "version": "0.9.4",
+      "status": "released",
+      "version": "2.0",
+      "updated": "2026-10-26",
+      "size": "7.2 MB",
+      "icon": "assets/img/photo3dx-icon.jpg",
+      "screenshots": [
+        "assets/img/photo3dx-cover.jpg"
+      ],
+      "description": "Photo3DX 把照片变成可以走进去的空间，同时也是一套完整的文件管理器。全景照片会完全包围你，普通照片会获得真实的深度感，设备上和云盘里的文件都能像在电脑上一样整理。\n\n所有处理都在设备本机完成，不用注册、不上传、不追踪。打开全景图，周围环境会渐渐变暗，你可以上下左右随意张望，往上能仰到 90°，躺着看天也行。浮动按钮跟着画面走，不会挡住你正看的地方。\n\n任何平面照片都能转成空间场景，深度信息全部在本机计算，左右歪头就能看到视差。用 iPhone 或 Vision Pro 拍的空间照片会以原生立体模式播放。\n\n文件管理这块做得很像 Windows 资源管理器：侧边栏、完整路径地址栏、前进后退、通过 IP 地址连电脑共享文件夹，图片留在原来的位置，不导入「照片」、不复制。",
+      "descriptionEn": "Photo3DX turns pictures into places you can step into — and it is a full file manager as well. Panoramas wrap all the way around you, ordinary photos gain real depth, and files on your device or in the cloud are as easy to organise as on a computer.\n\nEverything runs on device. No account, no upload, no tracking. Open a panorama and the room fades away: look left, right, up or behind, tilt all the way to 90° so you can lie back and look at the sky. Floating controls tilt with the image so they never cover what you are looking at.\n\nAny flat photo can become a spatial scene, with depth computed entirely on device — tilt your head and the parallax is real. Spatial photos shot on iPhone or Vision Pro play in native stereo.\n\nFile management works like Windows Explorer: a sidebar, a full path bar, back and forward, and connections to your computer by IP address. Your images stay where they are — nothing imported into Photos, nothing copied.",
+      "features": [
+        "360° 全景沉浸浏览，可仰到 90° 躺着看",
+        "普通照片本机计算深度，转成有视差的空间场景",
+        "原生播放 iPhone / Vision Pro 拍的空间照片",
+        "像资源管理器一样的文件管理：侧栏、路径栏、前进后退",
+        "通过 IP 地址直接浏览电脑共享文件夹，不复制文件",
+        "全程本机处理，无账号、无上传、无追踪 SDK"
+      ],
+      "featuresEn": [
+        "Immersive 360° panoramas, tilt up to 90° and watch lying down",
+        "Depth computed on device to turn flat photos into spatial scenes",
+        "Native playback of spatial photos shot on iPhone or Vision Pro",
+        "Explorer-style file management with sidebar, path bar and history",
+        "Browse your computer's shared folders by IP without copying files",
+        "Everything on device: no account, no upload, no tracking SDKs"
+      ],
+      "download": {
+        "type": "store",
+        "note": "一次性买断，无内购、无订阅。",
+        "noteEn": "One-time purchase. No in-app purchases, no subscription.",
+        "stores": [
+          {
+            "name": "App Store",
+            "url": "https://apps.apple.com/cn/app/photo3dx/id6818245035"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "isomira",
+      "name": "IsomiraCAD",
+      "nameEn": "IsomiraCAD",
+      "tagline": "把三维 CAD 模型从屏幕里拿出来，摆在真实空间",
+      "taglineEn": "Step inside your CAD models in real space",
+      "platforms": [
+        "visionOS"
+      ],
+      "status": "released",
+      "version": "3.0",
+      "updated": "2026-10-31",
+      "size": "9.5 MB",
+      "icon": "assets/img/isomira-icon.jpg",
+      "screenshots": [
+        "assets/img/isomira-cover.jpg"
+      ],
+      "description": "IsomiraCAD 是一款专为 Apple Vision Pro 打造的 CAD 查看器。它用自建的几何内核在本地解析 STEP、STL、OBJ、USDZ 文件，一比一还原，不需要联网，也不上传任何数据。\n\n把模型放到桌面上放大到真实尺寸，绕着走、蹲下看，看清每一个倒角、孔位和装配间隙。爆炸视图按层级拉开装配体，剖切平面切一刀看内部腔体和壁厚，实体 / 线框 / 着色随时切换，视图立方一键回到标准正视、侧视、俯视。\n\n面数、包围盒、单位这些信息即时可见；内核是自研的，不依赖任何第三方 CAD 授权库；大模型也能流畅旋转缩放。\n\n没有账号、没有服务器、没有第三方统计 SDK，安装后完全离线运行——出差、进车间、在没网的现场都能随时看图。",
+      "descriptionEn": "IsomiraCAD is a CAD viewer built for Apple Vision Pro. Its own geometry kernel parses STEP, STL, OBJ and USDZ locally, true to scale, with no network and no uploads.\n\nPut a model on your desk at real size and walk around it, crouch down, and inspect every chamfer, hole and assembly clearance. Exploded views pull assemblies apart by hierarchy; a section plane cuts through to show internal cavities and wall thickness; switch between solid, wireframe and shaded at will, and snap back to front, side or top view with the view cube.\n\nFace count, bounding box and units are always visible. The kernel is written from scratch — no third-party CAD licensing — and large models still rotate and zoom smoothly.\n\nNo account, no server, no third-party analytics. It runs fully offline once installed, so it works on a factory floor with no signal.",
+      "features": [
+        "本地解析 STEP / STL / OBJ / USDZ，自研几何内核",
+        "一比一真实尺寸，绕着模型走、蹲下看细节",
+        "爆炸视图按层级拆开装配体，看清零件关系",
+        "剖切平面看内部腔体与壁厚",
+        "实体 / 线框 / 着色切换，视图立方一键回标准视角",
+        "完全离线，无账号、无服务器、无统计 SDK"
+      ],
+      "featuresEn": [
+        "Parses STEP / STL / OBJ / USDZ locally with a self-built kernel",
+        "True 1:1 scale — walk around the model, crouch to inspect details",
+        "Exploded views separate assemblies by hierarchy",
+        "Section planes reveal internal cavities and wall thickness",
+        "Solid / wireframe / shaded modes with a one-tap view cube",
+        "Fully offline — no account, no server, no analytics SDK"
+      ],
+      "download": {
+        "type": "store",
+        "note": "一次性买断，无内购、无订阅。",
+        "noteEn": "One-time purchase. No in-app purchases, no subscription.",
+        "stores": [
+          {
+            "name": "App Store",
+            "url": "https://apps.apple.com/cn/app/isomiracad/id6818528461"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "curvora",
+      "name": "Curvora Browser",
+      "nameEn": "Curvora Browser",
+      "tagline": "标签页沿着弧线展开的 visionOS 浏览器",
+      "taglineEn": "A visionOS browser with curved tabs",
+      "platforms": [
+        "visionOS"
+      ],
+      "status": "released",
+      "version": "1.0",
       "updated": "2026-11-10",
-      "size": "1.2 MB",
-      "icon": "",
-      "screenshots": [],
-      "sample": true,
-      "description": "占位示例文案。这个软件是自己工作里天天用的工具，可以写写它最初是为什么做的。",
-      "descriptionEn": "Placeholder copy. This one comes from my own daily work — worth saying why it was built in the first place.",
+      "size": "6.3 MB",
+      "icon": "assets/img/curvora-icon.jpg",
+      "screenshots": [
+        "assets/img/curvora-cover.jpg"
+      ],
+      "description": "Curvora Browser 是一个干净、快速的网页浏览器，按你在空间里真实的浏览习惯来做。\n\n标签页沿着一道平滑的弧线展开，切换时不会丢掉上下文，用手势就能打开、关闭和重新排序。阅读模式会自动剥掉页面上的噪声，只留下内容，字号和背景随时能调，白天晚上都读得舒服。\n\n默认拦截跟踪器和广告，浏览历史只留在本机，一键进入隐私模式，不需要注册账号。页面加载快、滚动顺滑，地址栏同时处理搜索和网址。\n\n书签通过 iCloud 在设备之间同步，阅读列表跟着你走。",
+      "descriptionEn": "Curvora Browser is a clean, fast web browser built for the way you actually browse in space.\n\nTabs flow along a smooth curve so you can switch quickly without losing context — open, close and reorder them with simple gestures. Reader mode strips away clutter and leaves just the content, with adjustable text size and background for comfortable reading day or night.\n\nCurvora blocks trackers and ads by default, keeps your history local, and offers a one-tap private mode. No account required. Pages load fast, scrolling stays smooth, and the address bar handles search and URLs in one step.\n\nBookmarks sync across devices through iCloud, and your reading list follows you.",
       "features": [
-        "单 HTML 文件，双击即用，不装任何东西",
-        "任务之间的前后依赖连线一目了然",
-        "深色 / 浅色双主题，28 色自定义色板"
+        "弧形标签页，手势打开、关闭、重新排序",
+        "阅读模式自动剥离干扰，字号与背景可调",
+        "默认拦截跟踪器与广告，历史只留本机",
+        "一键隐私模式，无需注册账号",
+        "地址栏同时处理搜索与网址，一步到位",
+        "书签与阅读列表通过 iCloud 跨设备同步"
       ],
       "featuresEn": [
-        "One HTML file — double-click and go, nothing to install",
-        "Dependency links between tasks at a glance",
-        "Dark and light themes with a 28-colour custom palette"
+        "Curved tabs you can open, close and reorder with gestures",
+        "Reader mode strips clutter with adjustable text size and background",
+        "Blocks trackers and ads by default; history stays on device",
+        "One-tap private mode, no account required",
+        "Address bar handles search and URLs in one step",
+        "Bookmarks and reading list sync across devices via iCloud"
       ],
       "download": {
-        "type": "github",
-        "note": "从 GitHub Releases 下载压缩包，解压双击即用。",
-        "noteEn": "Download the archive from GitHub Releases, unzip, double-click.",
-        "url": "https://github.com/"
-      },
-      "changelog": [
-        {
-          "version": "0.9.4",
-          "date": "2026-11-10",
-          "notes": [
-            "依赖连线改为连接日期格边界",
-            "打印时自动隐藏连线"
-          ]
-        }
-      ]
+        "type": "store",
+        "note": "一次性买断，无内购、无订阅。",
+        "noteEn": "One-time purchase. No in-app purchases, no subscription.",
+        "stores": [
+          {
+            "name": "App Store",
+            "url": "https://apps.apple.com/cn/app/curvora-browser/id6821381781"
+          }
+        ]
+      }
     },
     {
-      "slug": "quote-tool",
-      "name": "报价单自动生成",
-      "nameEn": "Quote Builder",
-      "tagline": "填几个参数，直接出一份能发客户的报价单",
-      "taglineEn": "Fill in a few specs, get a client-ready quote",
+      "slug": "arcuva",
+      "name": "Arcuva Remote desktop",
+      "nameEn": "Arcuva Remote desktop",
+      "tagline": "把 Windows 放进一块可以弯曲的带鱼屏",
+      "taglineEn": "Your PC on a curved ultrawide screen in Vision Pro",
       "platforms": [
-        "Windows"
+        "visionOS"
       ],
-      "status": "coming",
-      "version": "",
-      "updated": "",
-      "size": "",
-      "icon": "",
-      "screenshots": [],
-      "sample": true,
-      "description": "占位示例文案。还没做完的软件也可以先放上来，让人知道你在做什么。",
-      "descriptionEn": "Placeholder copy. Unfinished apps can live here too — it shows what you are working on.",
+      "status": "released",
+      "version": "2.0",
+      "updated": "2026-11-02",
+      "size": "13.6 MB",
+      "icon": "assets/img/arcuva-icon.jpg",
+      "screenshots": [
+        "assets/img/arcuva-1.jpg",
+        "assets/img/arcuva-2.jpg",
+        "assets/img/arcuva-3.jpg"
+      ],
+      "description": "弧境 Arcuva 是为 Apple Vision Pro 设计的空间计算远程桌面。它把你的 Windows 电脑放进一块可以弯曲的超宽屏：曲率、尺寸、视距都能调，从平面一直到环绕你的同心曲面。\n\n分辨率预设包括 2560×1080、3440×1440、5120×1440、7680×2160，连接中途也能切换。实时显示当前清晰度（像素/度），帮你找到最舒服的大小。画质上关掉了色调映射，白色不发灰；放大时用 MetalFX 让文字边缘更锐利。\n\n操作可以看着目标捏一下，也可以像触摸屏一样直接用手指点，沉浸空间里最多支持十指。鼠标指针模式把屏幕当触控板用。还有 87 键 PC 虚拟键盘，Ctrl、Alt、Win 可粘滞，一键发送 Ctrl+Alt+Del，支持蓝牙键盘按物理位置直通。\n\n适合公司电脑：支持远程桌面网关，能直接导入 IT 部门给的 .rdp 文件，每台电脑可以保存多个账号。不需要注册，不收集数据，密码只保存在本机钥匙串。",
+      "descriptionEn": "Arcuva is a spatial computing remote desktop app for Apple Vision Pro. It puts your Windows PC on a curved ultrawide screen: adjust curvature, size and viewing distance anywhere from flat to a fully wraparound curve.\n\nResolution presets include 2560×1080, 3440×1440, 5120×1440 and 7680×2160, switchable mid-session. Current sharpness is shown in pixels per degree so you can find the most comfortable size. Tone mapping is off so whites stay white, and MetalFX sharpens text when you zoom in.\n\nLook at a target and pinch to click; or tap directly like a touch screen, up to ten fingers in immersive space. Pointer mode turns the screen into a trackpad. There is an 87-key PC virtual keyboard with sticky Ctrl, Alt and Win, a one-tap Ctrl+Alt+Del, and Bluetooth keyboards pass through by physical position.\n\nBuilt for work machines: RD Gateway support, direct import of the .rdp file your IT department gives you, and multiple saved accounts per computer. No registration, no data collection, passwords stay in the local keychain.",
       "features": [
-        "按机型参数自动计算配置清单",
-        "一键导出 PDF 报价单"
+        "曲率从平面到同心无级可调，尺寸与视距自定",
+        "最高 7680×2160，连接中途可切分辨率",
+        "实时显示像素/度，帮你找到最舒服的大小",
+        "捏合即点击，或直接用十指点按屏幕",
+        "87 键 PC 虚拟键盘，一键发 Ctrl+Alt+Del",
+        "支持远程桌面网关与 .rdp 文件导入"
       ],
       "featuresEn": [
-        "Builds the configuration list from machine specs",
-        "Exports a PDF quote in one click"
+        "Curvature adjustable from flat to concentric, with custom size and distance",
+        "Up to 7680×2160, switchable mid-session",
+        "Live pixels-per-degree readout to find the most comfortable size",
+        "Pinch to click, or tap directly with up to ten fingers",
+        "87-key PC virtual keyboard with one-tap Ctrl+Alt+Del",
+        "RD Gateway support and .rdp file import"
       ],
       "download": {
-        "type": "none",
-        "note": "还在做，暂时没有对外发布。做好了会放在这里。",
-        "noteEn": "Still in the works — it will show up here when it's ready."
-      },
-      "changelog": []
+        "type": "store",
+        "note": "目前只在美区 App Store 上架，中国区还没有。需要美区 Apple ID 才能购买。",
+        "noteEn": "Currently available on the US App Store only. A US Apple ID is required.",
+        "stores": [
+          {
+            "name": "App Store",
+            "url": "https://apps.apple.com/us/app/arcuva-remote-desktop/id6818957152"
+          }
+        ]
+      }
     }
   ]
 }

@@ -128,6 +128,7 @@
   var state = { platform: "all", q: "" };
 
   function applyFilter() {
+    if (!cards) return;
     var shown = 0;
     cards.forEach(function (card) {
       var plats = (card.dataset.platforms || "").toLowerCase();

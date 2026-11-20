@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>隐私政策 · Privacy Policy — {{SITE_NAME}}</title>
+<meta name="description" content="土豆清单 Potato List 的隐私政策：默认本地存储、不收集数据、不使用追踪与广告，支付由第三方记录商户处理。">
+<meta name="theme-color" content="#08090a">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="{{ASSETS}}assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="{{ASSETS}}assets/site.css">
+<link rel="stylesheet" href="{{ASSETS}}assets/doc.css">
+</head>
+<body>
+
+<div class="nav-shell">
+  <nav class="nav">
+    <a class="brand" href="{{ASSETS}}index.html">
+      <span class="mark">{{BRAND_LETTER}}</span><span data-zh="{{SITE_NAME}}" data-en="{{SITE_NAME_EN}}">{{SITE_NAME}}</span>
+    </a>
+    <div class="nav-links">{{NAV_LINKS}}</div>
+    <span class="nav-spacer"></span>
+    <div class="lang-switch" id="lang-switch">
+      <button type="button" data-lang="zh" aria-pressed="true">中</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="切换主题"></button>
+  </nav>
+</div>
+
+<main class="wrap">
+
+  <header class="doc-hero">
+    <span class="doc-eyebrow">Privacy</span>
+    <h1 class="lang-zh">隐私政策</h1>
+    <h1 class="lang-en">Privacy Policy</h1>
+    <p class="lede lang-zh">一句话概括：你的数据默认只存在你自己的浏览器里，我们没有服务器去收集它。</p>
+    <p class="lede lang-en">In one sentence: your data stays in your own browser by default — we have no server collecting it.</p>
+    <div class="doc-meta">
+      <span class="lang-zh">最后更新：2026 年 11 月 21 日</span>
+      <span class="lang-en">Last updated: 21 November 2026</span>
+      <span class="lang-zh">无追踪 · 无广告 · 无第三方分析</span>
+      <span class="lang-en">No tracking · No ads · No analytics</span>
+    </div>
+  </header>
+
+  <article class="doc-body">
+
+    <!-- ================= 中文 ================= -->
+    <div class="lang-zh">
+
+      <section>
+        <h2>1. 谁在处理你的信息</h2>
+        <p>「土豆清单（Potato List）」由黄彧（个人开发者，下称“我们”）开发与运营。就本政策涉及的个人信息，我们是控制者。联系邮箱：<a href="mailto:{{EMAIL}}">{{EMAIL}}</a>。</p>
+      </section>
+
+      <section>
+        <h2>2. 我们收集什么</h2>
+        <div class="callout">
+          <p><strong>默认情况下，我们不收集任何个人数据。</strong>软件的账号、任务、账目、设置全部保存在你浏览器的本地存储（localStorage / IndexedDB）中，不会发送到我们的服务器。</p>
+        </div>
+        <p>我们运行的是纯静态网站，没有后端接口，因此：</p>
+        <ul>
+          <li>没有注册服务器，不收邮箱到我们这里；</li>
+          <li>没有埋点、没有统计脚本、没有热力图、没有 A/B 测试；</li>
+          <li>没有广告网络、没有像素追踪、没有跨站追踪 Cookie。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. 存在你设备上的信息</h2>
+        <p>以下信息由软件写入你浏览器的本地存储，仅你本人可读取：</p>
+        <ul>
+          <li><strong>账号</strong>：你填写的邮箱、密码的加盐哈希值（不保存明文密码）、创建时间；</li>
+          <li><strong>内容</strong>：任务、清单、标签、备注、账目记录、分类与账户；</li>
+          <li><strong>偏好</strong>：深浅色主题、语言、当前视图；</li>
+          <li><strong>授权状态</strong>：试用开始时间、授权码与到期日。</li>
+        </ul>
+        <p>这些数据不会离开你的设备，除非你主动导出备份或自行配置同步。</p>
+      </section>
+
+      <section>
+        <h2>4. 你自己配置的同步（WebDAV）</h2>
+        <p>若你在设置中填写 WebDAV 地址与账号（例如坚果云），软件会直接由你的浏览器连接该服务器上传与下载数据，<strong>不经过我们</strong>。</p>
+        <p>该连接凭据只保存在你本机。数据存放在哪台服务器、由谁运营、适用何种隐私政策，取决于你选择的网盘服务商，请自行阅读其条款。</p>
+      </section>
+
+      <section>
+        <h2>5. 付款信息</h2>
+        <p>线上付款由第三方<strong>记录商户（Merchant of Record）</strong>处理，例如 Creem 或 Paddle。你是在与它们交易，因此：</p>
+        <ul>
+          <li>你的姓名、账单地址、卡号、税号等信息由支付平台收集与处理，<strong>我们看不到，也不会存储</strong>；</li>
+          <li>我们仅从支付平台收到：订单号、购买的产品与期限、金额、你的邮箱（用于发放授权码）；</li>
+          <li>支付平台会依其隐私政策处理数据，并依各国税法代扣代缴增值税/消费税。</li>
+        </ul>
+        <p>若你改用微信或支付宝人工转账，我们会看到你的转账备注与付款账号昵称，仅用于核对订单与发码。</p>
+      </section>
+
+      <section>
+        <h2>6. 邮件往来</h2>
+        <p>当你发邮件给我们（咨询、退款、报错），我们会收到你的邮箱地址与邮件内容。这些信息仅用于回复与处理你的请求，保存在邮箱中，不用于营销，不与第三方共享。</p>
+      </section>
+
+      <section>
+        <h2>7. 托管与日志</h2>
+        <p>网站托管在 GitHub Pages（GitHub, Inc.，美国）。与所有网站一样，托管方会自动记录访问日志（IP 地址、时间、请求路径、浏览器标识），用于安全与滥用防护。我们无法访问这些原始日志，也不会将其与其他信息关联。</p>
+        <p>若未来启用自有服务器（例如用于账号同步），我们会在启用前更新本政策，明确说明存储地点、保存期限与访问方式。</p>
+      </section>
+
+      <section>
+        <h2>8. 我们不做的事</h2>
+        <ul>
+          <li>不向任何人出售、出租你的数据；</li>
+          <li>不把你的数据用于训练模型；</li>
+          <li>不向你发送营销邮件（除非你主动订阅，且可随时退订）；</li>
+          <li>不在软件中植入广告或推广链接。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>9. 保存期限与删除</h2>
+        <p>本地数据由你掌握：在软件内删除对应内容，或清除浏览器数据，即完成删除。卸载、清除站点数据后，我们无法、也无法代为恢复。</p>
+        <p>邮件往来通常保留 24 个月，以处理可能的售后与账务核对，之后删除。如需提前删除，发邮件告知即可。</p>
+      </section>
+
+      <section>
+        <h2>10. 你的权利</h2>
+        <p>依据香港《个人资料（私隐）条例》及你所在地可能适用的法律（如欧盟 GDPR、英国 UK GDPR），你有权查阅、更正、删除我们持有的你的个人数据，有权反对或限制处理，有权要求数据可携带，有权向当地监管机构投诉。</p>
+        <p>由于我们持有的个人数据极少（通常只有邮件往来与订单记录），行使上述权利通常只需发一封邮件到 <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>，我们会在 30 天内回复。</p>
+      </section>
+
+      <section>
+        <h2>11. 跨境传输</h2>
+        <p>网站由 GitHub（美国）托管，支付由境外支付平台处理，因此访问日志与交易数据可能在中国大陆、香港以外处理。我们仅在提供服务所必需的范围内依赖这些服务商，并要求其遵守相应的数据保护义务。</p>
+      </section>
+
+      <section>
+        <h2>12. 儿童</h2>
+        <p>本服务不面向 13 岁以下的儿童，我们不会有意收集其个人信息。若你是家长或监护人，发现孩子向我们提供了个人信息，请联系我们删除。</p>
+      </section>
+
+      <section>
+        <h2>13. 安全</h2>
+        <p>网站全程使用 HTTPS。密码以加盐哈希形式保存，不保存明文。但请理解：任何本地存储都无法抵御设备被他人物理接触、浏览器被恶意扩展读取等风险，请为你的设备设置锁屏密码，并谨慎安装浏览器扩展。</p>
+      </section>
+
+      <section>
+        <h2>14. 政策更新</h2>
+        <p>本政策如有实质变更，我们会更新本页顶部的日期，并在变更生效前于网站首页提示。继续使用即表示接受更新后的政策。</p>
+      </section>
+
+      <section>
+        <h2>15. 联系我们</h2>
+        <p>隐私相关问题、数据删除请求：<a href="mailto:{{EMAIL}}">{{EMAIL}}</a>。运营者：黄彧 · 网站：yukkof.com。</p>
+      </section>
+
+    </div>
+
+    <!-- ================= English ================= -->
+    <div class="lang-en">
+
+      <section>
+        <h2>1. Who we are</h2>
+        <p>Potato List is developed and operated by Huang Yu, an independent developer ("we", "us"). We are the controller of the personal data described here. Contact: <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>.</p>
+      </section>
+
+      <section>
+        <h2>2. What we collect</h2>
+        <div class="callout">
+          <p><strong>By default, we collect no personal data.</strong> Accounts, tasks, transactions, and settings live in your browser's local storage (localStorage / IndexedDB) and are never sent to our servers.</p>
+        </div>
+        <p>This is a static website with no backend API, which means:</p>
+        <ul>
+          <li>no registration server — your email never reaches us;</li>
+          <li>no analytics, no tracking scripts, no heatmaps, no A/B tests;</li>
+          <li>no ad networks, no tracking pixels, no cross-site cookies.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. Data stored on your device</h2>
+        <p>The software writes the following to your browser's local storage, readable only by you:</p>
+        <ul>
+          <li><strong>Account</strong>: the email you enter, a salted hash of your password (never the plaintext), and creation time;</li>
+          <li><strong>Content</strong>: tasks, lists, tags, notes, transactions, categories, accounts;</li>
+          <li><strong>Preferences</strong>: theme, language, current view;</li>
+          <li><strong>Licence state</strong>: trial start date, licence key, expiry.</li>
+        </ul>
+        <p>This data does not leave your device unless you export a backup or configure sync yourself.</p>
+      </section>
+
+      <section>
+        <h2>4. Sync you configure yourself (WebDAV)</h2>
+        <p>If you enter a WebDAV endpoint and credentials (for example Nutstore), your browser connects directly to that server to upload and download data. <strong>We are not involved.</strong></p>
+        <p>Those credentials stay on your machine. Where your data is stored, who operates that server, and which privacy policy applies depend entirely on the provider you choose.</p>
+      </section>
+
+      <section>
+        <h2>5. Payment information</h2>
+        <p>Online payments are handled by a third-party <strong>Merchant of Record</strong> such as Creem or Paddle. You transact with them, therefore:</p>
+        <ul>
+          <li>your name, billing address, card details, and tax ID are collected and processed by the payment platform — <strong>we never see or store them</strong>;</li>
+          <li>we only receive: order ID, product and term purchased, amount, and your email (to issue the licence key);</li>
+          <li>the platform processes data under its own privacy policy and remits applicable VAT/GST/sales tax.</li>
+        </ul>
+        <p>If you pay manually by WeChat Pay or Alipay, we will see your transfer reference and payment account nickname, used solely to match the order and issue a key.</p>
+      </section>
+
+      <section>
+        <h2>6. Email correspondence</h2>
+        <p>If you email us (questions, refunds, bug reports), we receive your email address and the message. This is used only to respond and handle your request, is kept in our mailbox, is not used for marketing, and is not shared with third parties.</p>
+      </section>
+
+      <section>
+        <h2>7. Hosting and logs</h2>
+        <p>The website is hosted on GitHub Pages (GitHub, Inc., USA). Like any website, the host automatically records access logs (IP address, time, request path, user agent) for security and abuse prevention. We cannot access those raw logs and do not link them to other information.</p>
+        <p>If we later run our own server (for example for account sync), we will update this policy beforehand, stating where data is stored, for how long, and who can access it.</p>
+      </section>
+
+      <section>
+        <h2>8. What we never do</h2>
+        <ul>
+          <li>sell or rent your data to anyone;</li>
+          <li>use your data to train models;</li>
+          <li>send you marketing email (unless you subscribe, and you can unsubscribe at any time);</li>
+          <li>embed advertising or promotional links in the software.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>9. Retention and deletion</h2>
+        <p>Local data is under your control: delete items in the app, or clear your browser data. Once cleared, neither you nor we can recover it.</p>
+        <p>Email correspondence is kept for 24 months to handle after-sales and accounting checks, then deleted. You may request earlier deletion at any time.</p>
+      </section>
+
+      <section>
+        <h2>10. Your rights</h2>
+        <p>Under the Hong Kong Personal Data (Privacy) Ordinance and any law that applies where you live (such as the EU GDPR or UK GDPR), you have the right to access, correct, and erase personal data we hold, to object to or restrict processing, to data portability, and to complain to a supervisory authority.</p>
+        <p>Because we hold very little personal data (typically only email threads and order records), exercising these rights usually takes one email to <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>. We respond within 30 days.</p>
+      </section>
+
+      <section>
+        <h2>11. International transfers</h2>
+        <p>The site is hosted by GitHub (USA) and payments are processed by overseas platforms, so access logs and transaction data may be processed outside mainland China and Hong Kong. We rely on these providers only as far as necessary to deliver the Service, and require them to meet their own data protection obligations.</p>
+      </section>
+
+      <section>
+        <h2>12. Children</h2>
+        <p>The Service is not directed to children under 13, and we do not knowingly collect their personal data. If you are a parent or guardian and believe a child has provided us with personal data, contact us and we will delete it.</p>
+      </section>
+
+      <section>
+        <h2>13. Security</h2>
+        <p>The site uses HTTPS throughout. Passwords are stored as salted hashes, never in plaintext. Please understand that no local storage can resist physical access to your device or a malicious browser extension. Use a screen lock and install extensions sparingly.</p>
+      </section>
+
+      <section>
+        <h2>14. Changes to this policy</h2>
+        <p>If we make material changes, we will update the date at the top of this page and note it on the homepage before it takes effect. Continued use means you accept the updated policy.</p>
+      </section>
+
+      <section>
+        <h2>15. Contact</h2>
+        <p>Privacy questions and deletion requests: <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>. Operator: Huang Yu · Website: yukkof.com.</p>
+      </section>
+
+    </div>
+
+  </article>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand" data-zh="{{SITE_NAME}}" data-en="{{SITE_NAME_EN}}">{{SITE_NAME}}</div>
+        <div class="footer-note" data-zh="{{COPYRIGHT}}" data-en="{{COPYRIGHT_EN}}">{{COPYRIGHT}}</div>
+      </div>
+      <div class="footer-links">{{FOOTER_LINKS}}</div>
+    </div>
+    <div class="footer-wordmark">{{BRAND_LETTER}}</div>
+  </div>
+</footer>
+
+<script src="{{ASSETS}}assets/site.js"></script>
+</body>
+</html>
