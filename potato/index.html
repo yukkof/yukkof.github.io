@@ -1,31 +1,192 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>土豆清单 · 正在跳转</title>
-<link rel="canonical" href="https://app.yukkof.com/">
-<meta http-equiv="refresh" content="0; url=https://app.yukkof.com/">
+<title>土豆待办 Potato Todo — 免费在线待办清单，任务·日历·记账三合一</title>
+<meta name="description" content="土豆待办（Potato Todo）是免费的在线待办清单工具：任务管理、日历安排、收支记账三合一。注册即用，手机电脑自动同步，不用装 App，没有广告。">
+<meta name="keywords" content="待办,待办清单,待办事项,todo,todo list,任务管理,日程管理,时间管理,记账,免费待办软件,在线清单">
+<link rel="canonical" href="https://yukkof.com/potato/">
+<meta name="theme-color" content="#08090a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="土豆待办 Potato Todo — 免费在线待办清单">
+<meta property="og:description" content="任务、日历、记账三合一。注册即用，多设备自动同步，不用装 App。">
+<meta property="og:url" content="https://yukkof.com/potato/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"土豆待办","alternateName":"Potato Todo","applicationCategory":"ProductivityApplication","operatingSystem":"Web, iOS, Android, Windows, macOS","url":"https://app.yukkof.com/","description":"免费在线待办清单，任务管理、日历安排、收支记账三合一，多设备自动同步。","offers":{"@type":"Offer","price":"0","priceCurrency":"CNY"},"inLanguage":"zh-CN"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"土豆待办是免费的吗？","acceptedAnswer":{"@type":"Answer","text":"免费版永久可用，可以建 50 个任务、2 个清单、记 100 笔账。注册送 14 天专业版，试用到期不会自动扣费，功能回落到免费版，数据不会丢。"}},
+{"@type":"Question","name":"需要下载安装吗？","acceptedAnswer":{"@type":"Answer","text":"不用。土豆待办是网页应用，手机和电脑打开浏览器就能用。手机端可以添加到主屏幕，用起来和 App 一样。"}},
+{"@type":"Question","name":"换电脑数据还在吗？","acceptedAnswer":{"@type":"Answer","text":"在。登录同一个邮箱账号，数据会自动从云端同步下来，手机和电脑看到的是同一份。"}},
+{"@type":"Question","name":"支持记账吗？","acceptedAnswer":{"@type":"Answer","text":"支持。除待办清单和日历外，内置收支记账，可以按分类和账户记录每一笔，并查看统计。"}},
+{"@type":"Question","name":"数据存在哪里？","acceptedAnswer":{"@type":"Answer","text":"存在个人租用的服务器上，不卖给第三方，不接入广告和追踪脚本。可以随时导出成 JSON 文件带走。"}}
+]}
+</script>
 <style>
-html,body{height:100%;margin:0}
-body{display:grid;place-items:center;background:#f6f4f1;color:#221e1a;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
-.box{text-align:center;padding:24px}
-.ic{width:56px;height:56px;margin:0 auto 14px;border-radius:16px;background:#fbeee1;
-  display:grid;place-items:center;font-size:26px}
-b{font-size:17px;display:block;margin-bottom:6px}
-p{font-size:13px;color:#6d6459;margin:0 0 16px}
-a{display:inline-block;padding:9px 20px;border-radius:10px;background:#c2691f;color:#fff;
-  text-decoration:none;font-size:14px}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:#08090a;color:#f3f4f6;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+.wrap{max-width:820px;margin:0 auto;padding:0 22px}
+header{border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{display:flex;align-items:center;gap:10px;height:62px}
+.nav .mark{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
+  background:linear-gradient(145deg,rgba(194,105,31,.42),rgba(224,138,60,.14));
+  border:1px solid rgba(224,138,60,.30);font-size:16px}
+.nav b{font-size:15px;font-weight:600;letter-spacing:.2px}
+.nav .sp{flex:1}
+.nav a.back{font-size:13px;color:#a2a8b2;text-decoration:none}
+.nav a.back:hover{color:#f3f4f6}
+
+.hero{padding:64px 0 40px}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12px;color:#f0b429;
+  background:rgba(240,180,41,.10);border:1px solid rgba(240,180,41,.22);
+  padding:4px 11px;border-radius:999px;margin-bottom:20px}
+.eyebrow .dot{width:5px;height:5px;border-radius:50%;background:#45d69b}
+h1{font-size:clamp(30px,5.2vw,46px);line-height:1.22;margin:0 0 16px;letter-spacing:-.6px;font-weight:700}
+h1 em{font-style:normal;color:#e08a3c}
+.lede{font-size:16.5px;color:#a2a8b2;margin:0 0 30px;max-width:640px}
+.cta{display:flex;flex-wrap:wrap;gap:11px;align-items:center}
+.btn{display:inline-block;padding:12px 26px;border-radius:11px;text-decoration:none;
+  font-size:15px;font-weight:600;transition:.18s}
+.btn-p{background:#c2691f;color:#fff}
+.btn-p:hover{background:#d97b2c;transform:translateY(-1px)}
+.btn-g{border:1px solid rgba(255,255,255,.16);color:#f3f4f6}
+.btn-g:hover{border-color:rgba(255,255,255,.32)}
+.tiny{font-size:12.5px;color:#6c737c;margin-top:14px}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:34px 0 8px}
+.card{border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.032);
+  border-radius:16px;padding:20px}
+.card .ico{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;font-size:19px;
+  background:rgba(224,138,60,.12);border:1px solid rgba(224,138,60,.22);margin-bottom:13px}
+.card b{display:block;font-size:15px;margin-bottom:6px}
+.card p{margin:0;font-size:13.5px;color:#a2a8b2;line-height:1.7}
+
+section.blk{padding:44px 0 8px;border-top:1px solid rgba(255,255,255,.07);margin-top:40px}
+h2{font-size:21px;margin:0 0 20px;letter-spacing:-.2px}
+.faq{border-top:1px solid rgba(255,255,255,.07)}
+.faq details{border-bottom:1px solid rgba(255,255,255,.07);padding:15px 0}
+.faq summary{cursor:pointer;font-size:15px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:14px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:#6c737c;font-weight:400}
+.faq details[open] summary::after{content:"-"}
+.faq p{margin:11px 0 0;font-size:14px;color:#a2a8b2;line-height:1.78}
+
+footer{border-top:1px solid rgba(255,255,255,.07);margin-top:50px;padding:26px 0 44px;
+  font-size:12.5px;color:#6c737c}
+footer a{color:#a2a8b2;text-decoration:none;margin-right:16px}
+footer a:hover{color:#f3f4f6}
+
+@media(max-width:760px){
+  .grid{grid-template-columns:1fr}
+  .hero{padding:44px 0 26px}
+  .lede{font-size:15.5px}
+}
 </style>
 </head>
 <body>
-<div class="box">
-  <div class="ic">🥔</div>
-  <b>土豆清单已搬家</b>
-  <p>新版支持账号登录与云端同步，正在带你去新地址…</p>
-  <a href="https://app.yukkof.com/">打开新地址 app.yukkof.com</a>
+
+<header>
+  <div class="wrap nav">
+    <span class="mark">🥔</span>
+    <b>土豆待办</b>
+    <span class="sp"></span>
+    <a class="back" href="https://yukkof.com/">← 回到作品集</a>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="hero">
+    <span class="eyebrow"><span class="dot"></span>免费使用 · 不用安装 · 多设备同步</span>
+    <h1>土豆待办 —— 一个不啰嗦的<em>在线待办清单</em></h1>
+    <p class="lede">
+      任务、日历、记账放在同一个地方。打开浏览器就能用，手机和电脑自动同步，
+      没有广告，不用学，也不会在你记第三条待办的时候弹出付费墙。
+    </p>
+    <div class="cta">
+      <a class="btn btn-p" href="https://app.yukkof.com/">立即打开 →</a>
+      <a class="btn btn-g" href="#faq">常见问题</a>
+    </div>
+    <p class="tiny">注册只要邮箱和 6 位密码，送 14 天专业版，到期不会自动扣费。</p>
+  </section>
+
+  <div class="grid">
+    <div class="card">
+      <div class="ico">☑️</div>
+      <b>待办清单</b>
+      <p>今天要做什么，一眼看完。支持优先级、截止日期、子任务和多张清单，做完打勾就消失。</p>
+    </div>
+    <div class="card">
+      <div class="ico">📅</div>
+      <b>日历视图</b>
+      <p>任务按日期排进月历，哪天塞满了、哪天还空着，看得清清楚楚。拖一下就改期。</p>
+    </div>
+    <div class="card">
+      <div class="ico">💰</div>
+      <b>收支记账</b>
+      <p>顺手记一笔，按分类和账户汇总。不用再单独装一个记账 App，也不用来回切换。</p>
+    </div>
+  </div>
+
+  <section class="blk" id="faq">
+    <h2>常见问题</h2>
+    <div class="faq">
+      <details open>
+        <summary>土豆待办是免费的吗？</summary>
+        <p>免费版永久可用，可以建 50 个任务、2 个清单、记 100 笔账，日常用基本够。注册送 14 天专业版，
+           试用到期不会自动扣费，功能回落到免费版，数据一条都不会丢。</p>
+      </details>
+      <details>
+        <summary>需要下载安装吗？</summary>
+        <p>不用。它是网页应用，手机和电脑打开浏览器就能用。手机上可以「添加到主屏幕」，
+           之后点图标直接进，用起来和 App 没区别。</p>
+      </details>
+      <details>
+        <summary>换电脑、换手机，数据还在吗？</summary>
+        <p>在。登录同一个邮箱账号，数据会从云端自动同步下来。手机上勾掉一条，
+           电脑刷新一下就同步了。</p>
+      </details>
+      <details>
+        <summary>断网了还能用吗？</summary>
+        <p>能。数据同时存在本地浏览器里，断网照常记录，联网后自动推回云端。</p>
+      </details>
+      <details>
+        <summary>我的数据存在哪里？会不会被卖掉？</summary>
+        <p>存在自己租的服务器上，不接广告、不装追踪脚本、不卖给第三方。
+           你也可以随时导出成 JSON 文件带走。</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="blk">
+    <h2>现在就能开始</h2>
+    <p class="lede" style="margin-bottom:20px">
+      不用信用卡，不用手机号，注册完就能记第一条待办。
+    </p>
+    <div class="cta">
+      <a class="btn btn-p" href="https://app.yukkof.com/">打开土豆待办 →</a>
+    </div>
+  </section>
+
 </div>
-<script>location.replace("https://app.yukkof.com/");</script>
+
+<footer>
+  <div class="wrap">
+    <a href="https://yukkof.com/">作品集</a>
+    <a href="https://yukkof.com/pricing.html">定价</a>
+    <a href="https://yukkof.com/terms.html">服务条款</a>
+    <a href="https://yukkof.com/privacy.html">隐私政策</a>
+    <span style="display:block;margin-top:12px;color:#4d545c">土豆待办 Potato Todo · 个人作品 · 黄彧</span>
+  </div>
+</footer>
+
 </body>
 </html>
