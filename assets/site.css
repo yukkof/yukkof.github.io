@@ -1221,7 +1221,7 @@ a {
 }
 
 
-/* ---------- 妥办清单横幅 ---------- */
+/* ---------- 一件清单横幅 ---------- */
 .potato-band { padding: 0 0 10px; }
 .pb-card {
   display: flex; align-items: center; gap: 18px;
