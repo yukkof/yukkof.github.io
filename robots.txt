@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yukkof.com/sitemap.xml

@@ -1219,3 +1219,28 @@ a {
     scroll-behavior: auto;
   }
 }
+
+
+/* ---------- 妥办清单横幅 ---------- */
+.potato-band { padding: 0 0 10px; }
+.pb-card {
+  display: flex; align-items: center; gap: 18px;
+  padding: 18px 22px; border: 1px solid var(--border);
+  border-radius: var(--radius); background: var(--surface);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+}
+.pb-ico {
+  width: 46px; height: 46px; flex: 0 0 46px; border-radius: 14px;
+  display: grid; place-items: center; font-size: 23px;
+  background: linear-gradient(145deg, rgba(194,105,31,.30), rgba(224,138,60,.10));
+  border: 1px solid rgba(224,138,60,.28);
+}
+.pb-txt { min-width: 0; flex: 1; }
+.pb-txt b { display: block; font-size: 15.5px; letter-spacing: .2px; margin-bottom: 3px; }
+.pb-txt p { margin: 0; font-size: 13px; color: var(--fg-2); line-height: 1.65; }
+.pb-go { flex: 0 0 auto; }
+@media (max-width: 720px) {
+  .pb-card { flex-wrap: wrap; gap: 14px; padding: 16px 18px; }
+  .pb-txt { flex: 1 1 100%; order: 3; }
+  .pb-go { margin-left: auto; }
+}

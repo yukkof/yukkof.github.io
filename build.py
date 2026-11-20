@@ -73,7 +73,7 @@ def icon_html(app, size_class=""):
     )
 
 
-def pills_html(app, with_status=True):
+def pills_html(app, with_status=True, with_version=True):
     parts = []
     if with_status:
         st = app.get("status", "released")
@@ -85,7 +85,7 @@ def pills_html(app, with_status=True):
     for p in app.get("platforms", []):
         parts.append('<span class="pill">%s</span>' % esc(p))
     ver = (app.get("version") or "").strip()
-    if ver:
+    if ver and with_version:
         parts.append('<span class="pill">v%s</span>' % esc(ver))
     return "".join(parts)
 
@@ -321,7 +321,7 @@ def card_html(app, featured=False):
         esc(tagline),
         esc(tagline_en),
         esc(tagline),
-        pills_html(app),
+        pills_html(app, with_version=False),
         ARROW_ICON,
     )
 
@@ -371,20 +371,30 @@ def main():
             % (esc(p), esc(p), esc(p), esc(p))
         )
 
-    cards = "".join(card_html(a, featured=(i == 0)) for i, a in enumerate(apps)) or (
-        '<div class="empty">还没有软件，去 data/apps.json 里加一个吧。</div>'
-    )
+    # 数量能被 3 整除时不做主推大卡，让网格刚好排满，避免最后一行只剩一个
+    featured_at = -1 if (len(apps) % 3 == 0 or len(apps) < 4) else 0
+    cards = "".join(
+        card_html(a, featured=(i == featured_at)) for i, a in enumerate(apps)
+    ) or ('<div class="empty">还没有软件，去 data/apps.json 里加一个吧。</div>')
 
     github = (site.get("github") or "").strip()
     email = (site.get("email") or "").strip()
 
-    nav_links = ""
-    footer_links = ""
+    nav_links = (
+        '<a href="{{ASSETS}}potato/" data-zh="土豆待办" data-en="Potato Todo">土豆待办</a>'
+        '<a href="{{ASSETS}}pricing.html" data-zh="定价" data-en="Pricing">定价</a>'
+    )
+    footer_links = (
+        '<a href="{{ASSETS}}potato/" data-zh="土豆待办" data-en="Potato Todo">土豆待办</a>'
+        '<a href="{{ASSETS}}pricing.html" data-zh="定价" data-en="Pricing">定价</a>'
+        '<a href="{{ASSETS}}terms.html" data-zh="服务条款" data-en="Terms">服务条款</a>'
+        '<a href="{{ASSETS}}privacy.html" data-zh="隐私政策" data-en="Privacy">隐私政策</a>'
+    )
     if github:
         nav_links += '<a href="%s" target="_blank" rel="noopener">GitHub</a>' % esc(github)
         footer_links += '<a href="%s" target="_blank" rel="noopener">GitHub</a>' % esc(github)
     if email:
-        nav_links += '<a href="mailto:%s">联系</a>' % esc(email)
+        nav_links += '<a href="mailto:%s" data-zh="联系" data-en="Contact">联系</a>' % esc(email)
         footer_links += '<a href="mailto:%s">%s</a>' % (esc(email), esc(email))
 
     common = {
@@ -396,6 +406,7 @@ def main():
         "INTRO": esc(site.get("intro", "")),
         "INTRO_EN": esc(site.get("introEn", "") or site.get("intro", "")),
         "COPYRIGHT": esc(site.get("copyright", "")),
+        "COPYRIGHT_EN": esc(site.get("copyrightEn", "") or site.get("copyright", "")),
         "EMAIL": esc(email),
         "GITHUB": esc(github),
         "YEAR": year,
@@ -415,6 +426,16 @@ def main():
         ),
     )
     write(os.path.join(BASE, "index.html"), index_html)
+
+    # 条款 / 隐私 / 定价（放在根目录，路径不带前缀）
+    doc_pages = []
+    for name in ("terms", "privacy", "pricing"):
+        tpl_path = os.path.join(TPL, name + ".html")
+        if not os.path.exists(tpl_path):
+            continue
+        doc = render(read(tpl_path), dict(common, ASSETS=""))
+        write(os.path.join(BASE, name + ".html"), doc)
+        doc_pages.append(name + ".html")
 
     for a in apps:
         body = render(
@@ -451,6 +472,8 @@ def main():
                 shutil.rmtree(full, ignore_errors=True)
 
     print("生成完成：%d 个软件页面 + 1 个首页" % len(apps))
+    if doc_pages:
+        print("文档页：" + "、".join(doc_pages))
     print("首页：%s" % os.path.join(BASE, "index.html"))
 
 

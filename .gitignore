@@ -5,3 +5,6 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+.aliyun_cookie.json
+*.cookie
+_shots/
