@@ -380,11 +380,15 @@ def main():
     github = (site.get("github") or "").strip()
     email = (site.get("email") or "").strip()
 
-    nav_links = '<a href="pricing.html" data-zh="定价" data-en="Pricing">定价</a>'
+    nav_links = (
+        '<a href="{{ASSETS}}potato/" data-zh="土豆清单" data-en="Potato List">土豆清单</a>'
+        '<a href="{{ASSETS}}pricing.html" data-zh="定价" data-en="Pricing">定价</a>'
+    )
     footer_links = (
-        '<a href="pricing.html" data-zh="定价" data-en="Pricing">定价</a>'
-        '<a href="terms.html" data-zh="服务条款" data-en="Terms">服务条款</a>'
-        '<a href="privacy.html" data-zh="隐私政策" data-en="Privacy">隐私政策</a>'
+        '<a href="{{ASSETS}}potato/" data-zh="土豆清单" data-en="Potato List">土豆清单</a>'
+        '<a href="{{ASSETS}}pricing.html" data-zh="定价" data-en="Pricing">定价</a>'
+        '<a href="{{ASSETS}}terms.html" data-zh="服务条款" data-en="Terms">服务条款</a>'
+        '<a href="{{ASSETS}}privacy.html" data-zh="隐私政策" data-en="Privacy">隐私政策</a>'
     )
     if github:
         nav_links += '<a href="%s" target="_blank" rel="noopener">GitHub</a>' % esc(github)
